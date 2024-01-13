@@ -38,7 +38,7 @@ Before you get started, these are the steps that you need to follow only ONCE at
 Now, Follow the below steps for submitting each Project:
 - Copy your project folder.
 - Paste it in the local clone of `IEEE-Megaproject-23`(created in the above steps), inside the respective Project folder.
-- Rename your Project folder to your Full name.
+- Rename your Project folder to your Team name.
 - Now, Right-click and open `gitbash` in the `IEEE-Megaproject-23` folder, and issue the following commands in order:
 ```
 git add .
