@@ -47,7 +47,7 @@ git commit -m "Your commit message"
 
 git push -u origin main
 ```
-- After pushing your project to github, you need to create a Pull Request to the main IEEE LEAD repository. For that, open your forked repository in browser, and you'll notice a big green button saying “Compare & pull request”. Press it!
+- After pushing your project to github, you need to create a Pull Request to the main IEEE Megaproject repository. For that, open your forked repository in browser, and you'll notice a big green button saying “Compare & pull request”. Press it!
 - This will open a page in which you’ll be able to further edit the description for your proposed changes. Once, you are done with those, you can click on the "Create Pull Request button", and that's it.
  Congratulations, you just made a new Pull request!!! :fire:
 
