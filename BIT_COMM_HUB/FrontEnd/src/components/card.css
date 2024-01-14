@@ -1,0 +1,31 @@
+.Card {
+	text-wrap: wrap;
+
+	background-color: aliceblue;
+	height: auto;
+	border: 1px solid #ccc;
+	padding: 10px;
+	margin: 5px;
+	margin-left: 55%;
+	border-radius: 15px;
+	border-top-right-radius: 0%;
+	font-size: x-small;
+	word-wrap: break-word;
+	margin-right: 15%;
+	max-width: 350px; /* Limit the width of the card for better readability */
+}
+.Card2 {
+	text-wrap: wrap;
+	width: 30%;
+	background-color: aliceblue;
+	height: auto;
+	border: 1px solid #ccc;
+	padding: 10px;
+	margin: 5px;
+	margin-left: 25%;
+	border-radius: 15px;
+	border-top-left-radius: 0%;
+	font-size: x-small;
+	word-wrap: break-word;
+	max-width: 350px;
+}

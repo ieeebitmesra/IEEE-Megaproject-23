@@ -1,0 +1,35 @@
+img {
+	margin-left: 12%;
+	margin-right: 5%;
+	margin-top: 50px;
+	height: 400px;
+	width: 45%;
+	border-radius: 50%;
+	border: 1px solid;
+	box-shadow: 1px 2px 7px gray;
+}
+.both {
+	margin-left: 50px;
+	display: flex;
+}
+.total {
+	margin-left: 20px;
+}
+@media only screen and (max-width: 850px) {
+	img {
+		margin-left: 20%;
+		position: fixed;
+		margin-top: 60px;
+		height: 400px;
+		width: 60%;
+		border-radius: 50%;
+	}
+	.total {
+		margin-left: 0%;
+		text-align: center;
+	}
+	.both {
+		margin-left: 0%;
+		display: block;
+	}
+}

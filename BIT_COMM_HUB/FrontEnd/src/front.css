@@ -1,0 +1,34 @@
+/* .cont {
+	background-image: url("https://i.pinimg.com/736x/8f/c0/7e/8fc07e37e3b8c95e2dc71d17574bca2c.jpg");
+	background-color: #cccccc;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	filter: blur(8px);
+	-webkit-filter: blur(8px);
+	z-index: auto;
+} */
+
+.cont2 {
+	backdrop-filter: blur(10px);
+	position: relative;
+	color: white;
+}
+
+.cont2::after {
+	content: "";
+	opacity: 0.8;
+	background: rgb(26, 31, 41)
+		url("https://i.pinimg.com/736x/38/b2/ab/38b2ab617272e06e30b86543a9346141.jpg");
+	background-position: center;
+	background-size: cover;
+
+	/* filter: blur(5px);
+	-webkit-filter: blur(5px); */
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	position: absolute;
+	z-index: -1;
+}

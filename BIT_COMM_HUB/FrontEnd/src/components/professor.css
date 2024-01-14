@@ -1,0 +1,40 @@
+.branch {
+	display: flex;
+}
+.heading {
+	color: rgba(1, 1, 255, 0.916);
+	font-weight: 600;
+	margin-bottom: 20px;
+}
+.learn {
+	border-radius: 50%;
+	height: auto;
+	width: 40%;
+}
+.butt {
+	margin-right: 20%;
+	margin-left: 20px;
+}
+body {
+	background-color: rgb(224, 240, 255);
+}
+
+@media only screen and (max-width: 850px) {
+	.branch {
+		text-align: center;
+		margin-top: 10px;
+		display: block;
+	}
+	.butt {
+		margin-right: 0%;
+	}
+	.learn {
+		margin-left: 10%;
+		margin-top: 10%;
+		width: 65%;
+	}
+	.heading {
+		margin-left: 8%;
+		margin-bottom: 0%;
+	}
+}

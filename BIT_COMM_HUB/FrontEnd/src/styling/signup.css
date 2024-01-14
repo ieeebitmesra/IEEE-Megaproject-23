@@ -1,0 +1,67 @@
+input {
+	height: 40px;
+	width: 250px;
+	background-color: rgb(252, 251, 251);
+	color: #a49f9f;
+	border: 0px;
+	border-bottom: 2px solid black;
+	border-radius: 7px;
+}
+input,
+select,
+textarea {
+	color: #000;
+}
+h1 {
+	font-weight: 600;
+	margin: 0%;
+	color: rgb(255, 255, 255);
+	text-shadow: 1px 0 0 #000, -2px 0 0 #000, 0 2px 0 #000, 0 -2px 0 #000,
+		1px 1px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
+		1px 1px 1px #000;
+}
+.signup {
+	border-radius: 25px;
+	padding: 55px;
+	padding-bottom: 40px;
+	padding-top: 50px;
+	text-align: center;
+
+	border: 3px solid rgb(39, 39, 39);
+
+	margin: auto;
+	width: 400px;
+
+	color: rgb(255, 255, 255);
+
+	background-color: #ffffff30;
+}
+button {
+	margin-top: 20px;
+	border: 1px solid black;
+}
+
+.signup2 {
+	backdrop-filter: blur(10px);
+	position: relative;
+	color: white;
+	/*Note, you can change the color to your choice depending on your 
+    image and what color blends with it*/
+}
+
+.signup2::after {
+	content: "";
+	opacity: 0.85;
+	background: rgb(26, 31, 41)
+		url("https://i.pinimg.com/736x/38/b2/ab/38b2ab617272e06e30b86543a9346141.jpg");
+	background-position: center;
+	background-size: cover;
+	/* filter: blur(5px);
+	-webkit-filter: blur(5px); */
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	position: absolute;
+	z-index: -1;
+}

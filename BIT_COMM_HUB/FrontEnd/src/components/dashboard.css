@@ -1,0 +1,193 @@
+.sidecard {
+	margin-top: 40px;
+	position: relative;
+	background-color: #d0efff;
+	width: 230px;
+	height: auto;
+	position: absolute;
+	border-radius: 10px;
+	border: 2px solid black;
+	box-shadow: 1px 2px 7px gray;
+	transition: all 0.1s linear;
+}
+.detail {
+	max-height: fit-content;
+	margin-top: 40px;
+	padding: 30px;
+	height: 270px; /* You can set this to your desired fixed height */
+	overflow-y: auto;
+	border-radius: 17px;
+	border: 2px solid;
+	position: relative;
+	margin-left: 420px;
+	border: 2px solid black;
+	box-shadow: 1px 2px 7px gray;
+	max-width: 620px;
+	transition: all 0.1s linear;
+	flex: 1;
+}
+.imp {
+	text-align: center;
+	margin-left: 39%;
+	margin-top: 25px;
+	padding: 30px;
+	border-radius: 17px;
+	border: 2px solid;
+
+	border: 2px solid black;
+	box-shadow: 1px 2px 7px gray;
+	height: 85px;
+	transition: all 0.1s linear;
+	max-width: 470px;
+}
+.detImp {
+	display: block;
+}
+.detail:hover {
+	transform: scale(1.04);
+}
+.sidecard:hover {
+	transform: scale(1.04);
+}
+
+.puraDash {
+	height: 100vh;
+	overflow: scroll;
+	position: relative;
+	display: block;
+}
+.compo {
+	display: flex;
+}
+.detPro {
+	width: 1500px;
+	display: flex;
+	justify-content: space-between;
+	align-items: top;
+}
+.detail::after {
+	content: "";
+	opacity: 0.95;
+	background: rgb(26, 31, 41)
+		url("https://media.istockphoto.com/id/1160990138/vector/night-starry-sky-with-light-white-clouds.jpg?s=612x612&w=0&k=20&c=B0YjjkU-B2sUFMgilKne21-GH_dxFclaFTylK0YJQp0=");
+	background-position: center;
+	background-size: cover;
+	border-radius: 15px;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	position: absolute;
+	z-index: -4;
+}
+.sidecard {
+	backdrop-filter: blur(0.1px);
+}
+.sidecard::after {
+	content: "";
+
+	background: rgb(26, 31, 41)
+		url("https://img.freepik.com/free-vector/snowfall-with-bokeh-wallpaper_23-2148400297.jpg?size=626&ext=jpg&ga=GA1.1.1546980028.1703808000&semt=ais");
+	background-position: center;
+	background-size: cover;
+	border-radius: 8px;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	position: absolute;
+	z-index: -10;
+}
+
+.smallProfile {
+	position: relative;
+	margin-top: 40px;
+	padding: 30px;
+	border-radius: 17px;
+	border: 2px solid;
+	margin-left: 15px;
+	border: 2px solid black;
+	box-shadow: 1px 2px 7px gray;
+	height: auto;
+	transition: all 0.1s linear;
+	width: 250px;
+	backdrop-filter: blur(10px);
+	color: rgb(255, 255, 255);
+	transition: all 0.1s linear;
+}
+.smallProfile:hover {
+	transform: scale(1.04);
+}
+.imp:hover {
+	transform: scale(1.04);
+}
+.smallProfile::after {
+	content: "";
+	opacity: 0.9;
+
+	background: rgb(26, 31, 41)
+		url("https://media.istockphoto.com/id/1160990138/vector/night-starry-sky-with-light-white-clouds.jpg?s=612x612&w=0&k=20&c=B0YjjkU-B2sUFMgilKne21-GH_dxFclaFTylK0YJQp0=");
+	background-position: center;
+	background-size: cover;
+
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	position: absolute;
+	z-index: -10;
+	border-radius: 17px;
+}
+.imp {
+	color: white;
+	backdrop-filter: blur(0.1px);
+}
+.imp::after {
+	content: "";
+	opacity: 0.9;
+	background: rgb(26, 31, 41)
+		url("https://media.istockphoto.com/id/1160990138/vector/night-starry-sky-with-light-white-clouds.jpg?s=612x612&w=0&k=20&c=B0YjjkU-B2sUFMgilKne21-GH_dxFclaFTylK0YJQp0=");
+	background-position: center;
+	background-size: cover;
+
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	position: absolute;
+	z-index: -10;
+	border-radius: 17px;
+}
+.necheKa {
+	display: flex;
+}
+.dono {
+	width: 700px;
+}
+
+@media only screen and (max-width: 1250px) {
+	.detPro {
+		display: block;
+	}
+}
+@media only screen and (max-width: 850px) {
+	.sidecard {
+		margin-top: 550px;
+		z-index: 1;
+	}
+	.puraDash {
+		overflow-x: unset;
+	}
+
+	.detail {
+		z-index: -1;
+		margin-left: 7%;
+		margin-right: 60%;
+	}
+	.compo {
+		display: block;
+	}
+	.smallProfile {
+		margin-left: 370px;
+	}
+}

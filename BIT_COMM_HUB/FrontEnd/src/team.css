@@ -1,0 +1,62 @@
+.teambody {
+	font-family: "Montserrat", sans-serif;
+	margin: 0;
+	padding: 0;
+	background-color: #c6e9ff;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+}
+
+.team-section {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+.team-member {
+	text-align: center;
+	margin: 20px;
+	padding: 40px;
+	padding-top: 20px;
+	background-color: #fff;
+	border-radius: 10px;
+	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.21);
+	transition: transform 0.2s linear;
+}
+
+.team-member:hover {
+	transform: translateY(-25px);
+}
+
+.team-member img {
+	width: 150px;
+	height: 150px;
+	border-radius: 50%;
+	object-fit: cover;
+	margin-bottom: 10px;
+}
+
+.team-member h3 {
+	font-weight: 700;
+	margin: 0;
+}
+
+.team-member .role {
+	color: #888;
+	margin-bottom: 10px;
+}
+
+.fa {
+	font-size: 24px;
+	margin: 0 10px;
+	color: #000;
+	transition: transform 0.3s ease-in-out, color 0.3s ease-in-out;
+	text-decoration: none;
+}
+
+.team-member:hover .fa {
+	transform: scale(1.2);
+	color: #007aff;
+}

@@ -1,0 +1,71 @@
+.writing {
+	margin-left: 50px;
+}
+p {
+	font-size: 2.8rem;
+	font-family: "Times New Roman", Times, serif;
+}
+
+.flex {
+	justify-content: space-between;
+}
+
+.bitImageContainer {
+	display: flex;
+	justify-content: flex-end; /* Align the image to the right */
+	align-items: center; /* Center align vertically */
+}
+
+.bitImage {
+	height: 300px;
+	width: 300px;
+	border-radius: 50%;
+	margin-right: 300px;
+	margin-top: 110px;
+	border: 2px solid black;
+	-webkit-filter: drop-shadow(5px 5px 5px #8f8f8f);
+	filter: drop-shadow(5px 5px 5px #3e3e3e);
+}
+.bit {
+	margin-top: 30px;
+	margin-bottom: 20px;
+	font-size: 3.3rem;
+	margin-left: 70px;
+	/* color: rgb(204, 204, 204); */
+
+	text-shadow: 2px 0 0 #000, -2px 0 0 #000, 0 2px 0 #000, 0 -2px 0 #000,
+		1px 1px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
+		1px 1px 5px #000;
+}
+.gate {
+	font-size: 1.5rem;
+	color: rgb(212, 212, 212);
+}
+.success {
+	color: rgb(255, 255, 255);
+	text-shadow: 2px 0 0 #000, -2px 0 0 #000, 0 2px 0 #000, 0 -2px 0 #000,
+		1px 1px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
+		1px 1px 5px #000;
+}
+.ignite {
+	/* -webkit-text-stroke: 1px black; */
+	color: rgb(255, 255, 255);
+	text-shadow: 2px 2px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000,
+		-1px 1px 0 #000, 1px 1px 0 #000;
+}
+header {
+	border: 3.1px solid black;
+}
+.cont2 {
+	max-height: 110vh;
+	overflow: scroll;
+}
+.SineIn {
+	background-color: rgba(194, 180, 255, 0.597);
+	-webkit-backdrop-filter: blur(5px);
+	backdrop-filter: blur(5px);
+	padding: 7px;
+	width: 350px;
+	border: 2px solid;
+	border-radius: 8px;
+}

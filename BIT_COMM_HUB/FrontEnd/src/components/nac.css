@@ -1,0 +1,43 @@
+.beechKa {
+	position: fixed;
+	left: 50%;
+
+	transform: translate(-50%, -50%);
+}
+header {
+	background-color: rgb(132, 159, 255);
+	position: relative;
+	border: 3px solid black;
+}
+.icon {
+	transition: all 0.1s linear;
+}
+
+.icon:hover {
+	transform: scale(1);
+}
+
+.nav2 {
+	backdrop-filter: blur(10px);
+}
+
+.nav2::after {
+	content: "";
+	opacity: 0.6;
+	background: rgb(26, 31, 41)
+		url("https://cdni.iconscout.com/illustration/premium/thumb/summertime-background-2750956-2311751.png?f=webp");
+	background-position: center;
+	background-size: cover;
+	border-radius: 15px;
+	filter: blur(3px);
+	-webkit-filter: blur(3px);
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	position: absolute;
+	z-index: -4;
+}
+.drop {
+	z-index: 10;
+}
