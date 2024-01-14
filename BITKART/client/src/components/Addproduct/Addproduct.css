@@ -1,0 +1,147 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.sellbox {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: solid black 2px;
+    height: 100vh;
+    width: 100%;
+    background-image: url("sell.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    padding: 2rem;
+}
+
+.productd {
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    background-color: rgba(0, 0, 0, 0.403);
+    backdrop-filter: blur(5px);
+    padding: 2rem;
+    border-radius: 2rem;
+}
+
+.productd h2 {
+    font-size: 2.5rem; /* Adjusted for responsiveness */
+    font-weight: bold;
+    color: white;
+}
+
+.pd {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 1rem;
+}
+.pd input {
+    width: 100%;
+    padding: 1rem;
+    font-size: 1rem;
+    border: 1.8px solid #041a46;
+    border-radius: 5px;
+    background-color: #fff;
+    color: #333;
+}
+
+.pd input:focus {
+    outline: none;
+    border-color: #00132e;
+    box-shadow: 0 0 5px rgba(0, 19, 46, 0.5);
+}
+
+
+.pd label {
+    font-weight: bold;
+   color:white;
+    font-size: 1.2rem; /* Adjusted for responsiveness */
+    margin-bottom: 0.5rem;
+}
+
+.pd select {
+    width: 100%;
+    text-align: center;
+    padding: 1rem; /* Adjusted for responsiveness */
+    font-size: 1rem; /* Adjusted for responsiveness */
+    border: 1.8px solid #041a46;
+    border-radius: 5px;
+    background-color: #fff;
+    cursor: pointer;
+}
+
+.pd select option {
+    text-align: center;
+    padding: 1rem; /* Adjusted for responsiveness */
+    font-size: 0.9rem; /* Adjusted for responsiveness */
+    background-color: #f8f8f8;
+    color: #333;
+}
+
+.pd select option:hover {
+    background-color: #ddd;
+}
+.pd button {
+    width: 100%;
+    padding: 1rem;
+    font-size: 1rem;
+    border: 1.8px solid #041a46;
+    border-radius: 5px;
+    background-color: #041a46;
+    color: #fff;
+    cursor: pointer;
+    margin-left: 10rem;
+}
+
+.pd button:hover {
+    background-color: #00132e;
+}
+
+
+/* Media queries for responsiveness */
+@media screen and (max-width: 1200px) {
+    .productd {
+        width: 80%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .sellbox {
+        padding: 1rem;
+    }
+
+    .productd {
+        width: 90%;
+        padding: 1.5rem;
+    }
+
+    .pd {
+        margin: 0.5rem;
+    }
+    
+    .productd h2 {
+        font-size: 2rem;
+    }
+
+    .pd label {
+        font-size: 1rem;
+    }
+
+    .pd select {
+        padding: 0.8rem;
+        font-size: 0.8rem;
+    }
+
+    .pd select option {
+        padding: 0.8rem;
+        font-size: 0.7rem;
+    }
+}

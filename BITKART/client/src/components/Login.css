@@ -1,0 +1,134 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.login-singup {
+    display: flex;
+}
+
+.Login-container {
+    height: 100vh;
+    width: 100vh;
+    background-image: url("./login.jpg");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    gap: 2rem;
+    padding: 5rem;
+}
+
+.Singup {
+    height: 100vh;
+    width: 100vh;
+    display: flex;
+    flex-direction: column;
+    padding: 3rem;
+    background-color: rgba(73, 48, 198, 0.829);
+    align-items: center;
+}
+
+.Singup h1 {
+    font-size: 9rem;
+    color: white;
+}
+
+.Singup P {
+    font-size: 2rem;
+    color: white;
+}
+
+.singbtn {
+    margin-top: 5rem;
+    font-size: 1.5rem;
+    background-color: rgba(231, 229, 238, 0.829);
+    border: none;
+    color: rgb(5, 3, 64);
+    padding-left: 4rem;
+    padding-right: 4rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    border-radius: 1.5rem;
+}
+
+.Login-container h1 {
+    font-size: 4rem;
+    color: rgb(1, 12, 65);
+}
+
+.ii {
+    height: 3rem;
+    width: 25rem;
+    margin: 1rem;
+}
+
+#login {
+    height: 3rem;
+    width: 10rem;
+    border-radius: 1.5rem;
+    background-color: rgba(58, 42, 197, 0.859);
+    font-size: larger;
+    color: white;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+.input input::placeholder {
+    font-size: 1.5rem;
+    color: rgb(3, 1, 54);
+}
+
+.input input {
+    background-color: rgba(49, 43, 226, 0.393);
+    font-size: 1.5rem;
+    padding: 1.5rem;
+    color: rgb(3, 1, 54);
+}
+
+@media screen and (max-width: 1000px) {
+    .login-singup {
+        flex-direction: column;
+    }
+
+    .Login-container,
+    .Singup {
+        height: auto;
+        width: auto;
+        padding: 2rem;
+    }
+
+    .Singup h1 {
+        font-size: 4rem;
+    }
+
+    .Singup P {
+        font-size: 1.5rem;
+    }
+
+    .singbtn {
+        margin-top: 2rem;
+        font-size: 1.2rem;
+    }
+
+    .Login-container h1 {
+        font-size: 3rem;
+    }
+
+    .ii {
+        width: 100%;
+    }
+
+    #login {
+        width: 100%;
+    }
+
+    .input input {
+        width: 100%;
+    }
+}
