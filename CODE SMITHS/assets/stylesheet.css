@@ -1,0 +1,80 @@
+*{
+    font-family:"Roboto",sans-serif;
+    margin:0;
+    padding:0;
+    box-sizing:0;
+  }
+  .heading{
+    color: orange;
+    background-color: black;
+    justify-content: center;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    padding: 20px;
+  }
+  .search-button,
+  .plotgraph-button,
+  .forecast-button{
+    background-color:green;
+    color:white;
+    border:none;
+    padding: 10px;
+    border-radius:2px;
+    cursor:pointer;
+    margin-right:8px;
+    transition:opacity 0.15s;
+  
+  }
+  .search-button:hover,
+  .plotgraph-button:hover,
+  .forecast-button:hover{
+    opacity:0.8;
+  }
+  .search_stock,
+  .datepicker,
+  .forecast{
+    padding-top: 50px;
+    padding-bottom: 30px;
+  }
+  .boxcontainer{
+    display:flex;
+    background:url("https://www.skillsuccess.com/wp-content/uploads/2020/08/stock-market-chart-2.jpg");
+    background-size: cover;  
+  }
+  
+  .inputpart{
+    width:30 vw;
+    color: white;
+    padding: 20px;
+    backdrop-filter: blur(10px);
+    display: flex;
+    flex-direction: column;
+    justify-content: top;
+    background-color:rgba(109, 109, 98, 0.226);
+  }
+  .visualpart
+  {
+    display: flex;
+    flex-direction: column;
+    flex:1;
+    color:orange;
+    padding: 20px;
+    overflow: auto;
+  }
+  .header{
+    text-align: center;
+    font-size: 20px;
+  }
+  .description_ticker{
+    color: white;
+    justify-content: center;
+    padding: 30px;
+  }
+  .heading{
+    font-size:25px;
+  }
+  .invitation{
+    font-size:12px;
+    
+  }
