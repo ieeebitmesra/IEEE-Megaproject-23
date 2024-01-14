@@ -1,0 +1,135 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.mbox{
+   display: flex;
+   flex-direction: column;
+}
+.Container{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+}
+.singup{
+    width: 50%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: url("./Singup.jpg");
+    background-repeat:no-repeat;
+    background-size: 100% 100%;
+}
+.singup h1{
+    font-size: 4rem;
+    margin-bottom: 3rem;
+}
+.input input{
+    height: 0.6rem;
+    margin: 1rem;
+    background-color: rgba(128, 43, 226, 0.585);
+    font-size:1.5rem ;
+    padding: 1.5rem;
+}
+#hostel-no{
+    width:13rem;
+    text-align: center;
+}
+#singup{
+    font-size: 1.5rem;
+    padding: 1rem;
+    padding-left: 3rem;
+    padding-right: 3rem;
+    background-color: rgba(255, 136, 0, 0.778);
+    border-radius: 2rem;
+}
+.loginn{
+    height: 100vh;
+    width: 40vw;
+    display: flex;
+    flex-direction: column;
+    padding: 3rem;
+    background-color: rgba(160, 48, 198, 0.735);
+    align-items: center;
+}
+.heading h1{
+    color:white;
+    font-size: 6.6rem;
+    margin: 1rem;
+}
+.tt h2{
+    font-size: 3rem;
+}
+.loginn button{
+    padding:0.5rem;
+    font-size:1.5rem;
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+    margin-top: 1rem;
+    border-radius: 1.5rem;
+    color:rgba(160, 48, 198, 0.735);
+    border:solid 1px white;
+};
+@media screen and (max-width:1000px){
+    .Container{
+        flex-direction: column; 
+        justify-content: center;
+        width: 100%;
+    }
+   
+    
+}
+button:hover{
+    cursor: pointer;
+}
+@media screen and (max-width: 600px) {
+    .singup {
+        width: 100%;
+        padding: 2rem; 
+    }
+
+    .singup h1 {
+        font-size: 3rem; 
+    }
+
+    .input input {
+        width: 100%; 
+    }
+}
+.loginn {
+    height: 100vh;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    padding: 3rem;
+    background-color: rgba(160, 48, 198, 0.735);
+    align-items: center;
+}
+
+@media screen and (max-width: 600px) {
+    .loginn {
+        padding: 1rem;
+    }
+
+    .heading h1 {
+        font-size: 4rem;
+        margin: 0.5rem;
+    }
+
+    .tt h2 {
+        font-size: 2rem;
+    }
+
+    .loginn button {
+        padding: 0.5rem 2rem;
+        font-size: 1.2rem;
+        margin-top: 0.5rem;
+    }
+}
+

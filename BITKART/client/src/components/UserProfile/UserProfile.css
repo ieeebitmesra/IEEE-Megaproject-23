@@ -1,0 +1,82 @@
+.udiv{
+    background-image: url(ubg.jpg);
+    background-repeat:repeat;
+    background-size: 100% 100%;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.uc{
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+    justify-content: center;
+    align-items: center;
+     width: 55%;
+     margin:1rem;
+     height: 95%;
+    background-color: rgba(53, 51, 51, 0.274);
+    backdrop-filter: blur(7px);
+    border-radius: 0.7rem;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+.uc img{
+  height: 8rem;
+  width:8rem;
+    border-radius: 50%;
+    transition: transform 0.1s ease-in-out, box-shadow 0.1s ease-in-out;
+}
+.uc img:hover{
+    transform: scale(1.05);
+
+
+}
+.uc input{
+    margin :1rem;
+    background-color: rgba(255, 255, 255, 0);
+    color: rgb(255, 255, 255);
+    height: 2rem;
+    width:20rem;
+    border-radius: 0.3rem;
+    cursor:text;
+    font-size: 1rem;
+    padding: 1rem;
+
+}
+
+.uc button{
+    background-color: rgba(255, 255, 255, 0);
+    padding: 1rem;
+    margin-top:1.6rem;
+    color: white;
+    font-size: 1rem;
+    border: solid white 1px;
+    border-radius: 0.5rem;
+}
+.uc button:active {
+    background-color: #000000;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+}
+.uc label{
+    color :white;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+@media screen and (max-width: 600px) {
+    .uc {
+        width: 95%;
+    }
+
+    .uc img {
+        height: 4rem;
+        width: 4rem;
+    }
+
+    .uc input {
+        width: 100%;
+        max-width: none;
+    }
+}
