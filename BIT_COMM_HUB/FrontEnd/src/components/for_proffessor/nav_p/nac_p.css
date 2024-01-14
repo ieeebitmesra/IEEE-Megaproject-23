@@ -1,0 +1,25 @@
+.beechKa {
+	position: fixed;
+	left: 50%;
+
+	transform: translate(-50%, -50%);
+}
+header {
+	background-color: rgb(192, 203, 255);
+	position: relative;
+	border: 3px solid black;
+	color: rgb(1, 5, 233);
+}
+.icon {
+	transition: all 0.1s linear;
+}
+
+.icon:hover {
+	transform: scale(1.44);
+}
+.drop {
+	position: absolute;
+
+	left: 0;
+	z-index: 100;
+}

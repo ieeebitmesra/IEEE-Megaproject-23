@@ -1,0 +1,95 @@
+.body1 {
+	background-color: #d2e0fb;
+}
+h1 span {
+	color: #ffe5e5;
+	background-color: #5d12d2;
+	padding: 25px;
+	border-radius: 15px;
+	border: 3px solid black;
+}
+h1 {
+	text-align: center;
+}
+.heading {
+	margin-top: 50px;
+	margin-bottom: 4rem;
+}
+img {
+	height: 100px;
+	width: 100px;
+	margin: 50px;
+	border-radius: 20%;
+	box-shadow: 7px 7px 5px rgb(209, 243, 153);
+	border: 2px solid black;
+	margin-bottom: 0px;
+}
+.clubName {
+	font-size: 2rem;
+	margin-bottom: 20px;
+	margin-top: 20px;
+	font-weight: 700;
+	color: #b931fc;
+}
+
+.card > .term {
+	border: 1px solid black;
+	text-align: center;
+	max-width: 20rem;
+	min-width: 20rem;
+	margin: 2rem;
+	padding: 1rem;
+	padding-top: 2px;
+	padding-bottom: 2rem;
+	border-radius: 30px;
+	box-shadow: 10px 10px 0 rgba(0, 0, 0, 0.05), 0 5px 20px rgba(0, 0, 0, 0.1);
+	background-color: rgb(222, 250, 255);
+	margin-top: 0px;
+}
+.card2 > .term {
+	border: 1px solid black;
+	text-align: center;
+	max-width: 20rem;
+	min-width: 20rem;
+	margin: 2rem;
+	padding: 1rem;
+	padding-top: 2px;
+	padding-bottom: 2rem;
+	border-radius: 30px;
+	box-shadow: 10px 10px 0 rgba(0, 0, 0, 0.05), 0 5px 20px rgba(0, 0, 0, 0.1);
+	background-color: rgb(222, 250, 255);
+	margin-top: 0px;
+}
+
+dd {
+	word-wrap: break-word;
+	width: 20rem;
+}
+.clubDescription {
+	margin-bottom: 15px;
+}
+dd {
+	font-size: 97.5%;
+	margin-left: 0;
+}
+.bada > .card {
+	display: inline-flex;
+}
+.bada > .card2 {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.bada > .hard {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+h2 {
+	margin-top: 30px;
+	margin-bottom: 50px;
+
+	text-align: center;
+
+	font-size: 1.8rem;
+}

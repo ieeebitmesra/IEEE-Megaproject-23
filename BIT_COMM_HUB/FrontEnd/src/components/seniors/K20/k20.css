@@ -1,0 +1,32 @@
+/* Prof_cs.css */
+
+/* Make the container scrollable and position the chat input at the bottom */
+.container {
+	display: flex;
+	flex-direction: column;
+	height: 100vh; /* Assuming you want the chat to take up the full viewport height */
+	overflow-y: auto; /* Enable scrolling when content overflows */
+}
+
+.down_input {
+	margin-left: 40%;
+
+	background-color: #f9f9f9; /* Add a background color for better visual separation */
+	padding: 10px;
+	border-top: 1px solid #ccc;
+	position: absolute;
+	bottom: 0px; /* Optional: Add a border above the input */
+}
+.back {
+	background-image: url("http://surl.li/osmtr");
+	filter: blur(8px);
+	-webkit-filter: blur(8px);
+
+	/* Full height */
+	height: 100%;
+
+	/* Center and scale the image nicely */
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}

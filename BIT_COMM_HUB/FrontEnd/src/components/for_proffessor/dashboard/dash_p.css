@@ -1,0 +1,6 @@
+.compo {
+	height: 100vh;
+	overflow: scroll;
+	position: relative;
+	display: block;
+}

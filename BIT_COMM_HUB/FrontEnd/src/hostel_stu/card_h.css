@@ -1,0 +1,79 @@
+.Card_h {
+	text-wrap: wrap;
+
+	background-color: aliceblue;
+	height: auto;
+	border: 1px solid #ccc;
+	padding: 10px;
+	margin: 5px;
+	margin-left: 55%;
+	border-radius: 15px;
+	border-top-right-radius: 0%;
+	font-size: x-small;
+	word-wrap: break-word;
+	margin-right: 15%;
+	max-width: 400px; /* Limit the width of the card for better readability */
+}
+/* .puraDash {
+	height: 100vh;
+	overflow: scroll;
+	position: relative;
+	display: block;
+} */
+/* Prof_cs.css */
+
+/* Make the container scrollable and position the chat input at the bottom */
+.container {
+	display: flex;
+	flex-direction: column;
+	height: 100vh; /* Assuming you want the chat to take up the full viewport height */
+	overflow-y: auto; /* Enable scrolling when content overflows */
+}
+
+.down_input {
+	margin-left: 40%;
+
+	/* background-color: #f9f9f9; Add a background color for better visual separation */
+	padding: 10px;
+	border-top: 1px solid #ccc;
+	position: absolute;
+	bottom: 0px; /* Optional: Add a border above the input */
+}
+.back {
+	background-image: url("http://surl.li/osmtr");
+	filter: blur(8px);
+	-webkit-filter: blur(8px);
+
+	/* Full height */
+	height: 100%;
+
+	/* Center and scale the image nicely */
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.Card_h2 {
+	text-wrap: wrap;
+	width: 30%;
+	background-color: aliceblue;
+	height: auto;
+	border: 1px solid #ccc;
+	padding: 10px;
+	margin: 5px;
+	margin-left: 25%;
+	border-radius: 15px;
+	border-top-left-radius: 0%;
+	font-size: x-small;
+	word-wrap: break-word;
+	max-width: 400px;
+}
+
+@media only screen and (max-width: 850px) {
+	.Hostel_image {
+		visibility: hidden;
+	}
+	/* .Card_h {
+		margin-bottom: 150px;
+	} */
+}
