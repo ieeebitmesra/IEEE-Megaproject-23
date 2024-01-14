@@ -1,0 +1,42 @@
+.cat {
+    display: flex;
+    flex-direction: row;
+    background-color: black;
+    height: 2rem;
+    align-items: center;
+}
+
+.cat select {
+    display: none;
+}
+
+.cat span {
+    margin-left: 1rem;
+    margin-right: 1rem;
+    color: white;
+    transition: transform 0.1s ease;
+    cursor: pointer;
+}
+
+.cat span:hover {
+    transform: scale(1.1);
+}
+
+@media (max-width: 600px) {
+    .cat span {
+        display: none;
+    }
+
+    .cat select {
+        display: block;
+        width: 100%;
+        height: 100%;
+        padding: 0.5rem;
+        color: white;
+        background-color:black;
+        backdrop-filter: blur(10px);
+        /* border: 1px solid white; */
+        cursor: pointer;
+        border-radius: 2px;
+    }
+}

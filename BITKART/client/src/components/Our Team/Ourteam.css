@@ -1,0 +1,150 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.main {
+    position: relative;
+    background-image: url(./1621.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 100% 100%;
+   
+    
+    
+}
+
+.teampage {
+    font-family: cursive;
+    display: inline-block;
+    color: rgb(255, 255, 255);
+    border: none;
+    position: relative;
+    font-size: 2rem;
+    padding: 1rem 0rem;
+    text-align: center;
+    
+}
+.teampage h1{
+    color: white;
+    font-size: 6rem;
+    text-align: center;
+}
+
+.home-container {
+    width: 100%;
+    height: 80vh;
+    display: flex;
+    padding-top: 5rem;
+    align-items: baseline;
+    justify-content: space-evenly;
+    /* background-color: rgb(63, 77, 231); */
+    box-sizing: border-box;
+    position: relative;
+    align-items: start;
+   
+}
+
+.profile-card {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 50%;
+    box-shadow: -5px 8px 45px rgba(51, 51, 51, 0.126);
+    transition: all .4s;
+    margin: 2rem 5rem;
+}
+
+.profile-card:hover {
+    border-radius: 10px;
+    height: 300px;
+}
+
+.profile-card .img {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.profile-card:hover img {
+    border-radius: 10px;
+    transform: translateY(-180px);
+}
+
+.img img {
+    object-fit: fill;
+    width: 100%;
+    border-radius: 50%;
+    transition: all .4s;
+    z-index: 99;
+}
+
+.social-links .insta {
+    list-style: url(./insta.svg);
+}
+
+.social-links .ll {
+    list-style: url(./linkedin.svg);
+}
+
+.social-links .git {
+    list-style: url(./git.svg);
+}
+
+.caption {
+    text-align: center;
+    transform: translateY(-150px);
+    opacity: 0;
+    pointer-events: none;
+    transition: all .5s;
+}
+
+.social-links a {
+    color: #0c52a1;
+    font-size: large;
+}
+
+.profile-card:hover .caption {
+    opacity: 1;
+    pointer-events: all;
+}
+
+.caption h3 {
+    font-size: 21px;
+    color: #0c52a1;
+    font-weight: 600;
+}
+
+.caption p {
+    font-size: 18px;
+    font-weight: 550;
+    margin: 2px 0 12px 0;
+}
+
+.caption .social-links a {
+    font-size: 21px;
+    margin: 7px 3px;
+    cursor: pointer;
+    color: #333;
+    transition: all .4s;
+}
+
+.caption .social-links a:hover {
+    color: black;
+}
+
+.caption a {
+    text-decoration: none;
+}
+
+@media (max-width : 900px) {
+    .home-container {
+        display: inline-table;
+        margin: auto;
+        text-align: -webkit-center;
+    }
+
+}
