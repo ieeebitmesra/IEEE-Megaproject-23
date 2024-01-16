@@ -1,0 +1,4 @@
+requests~=2.31.0
+python-dotenv~=1.0.0
+bert-extractive-summarizer~=0.10.1
+torch~=2.1.2
