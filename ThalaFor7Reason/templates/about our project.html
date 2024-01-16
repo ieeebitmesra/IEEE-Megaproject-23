@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   
+    <title>about our project</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='caption.css')}}">
+</head>
+
+<body>
+    
+    <div class="navbar">
+        <div class="navbar">
+            <a href="/">Home</a>
+            <a href="/first">About Us</a>
+            <a href="/second">About our Project</a>
+        </div>
+    </div>
+    <main>
+        <section class="project-description">
+            <section id="about" class="project-description">
+                <div class="container1">
+                    <div class="page">
+                        <p>Welcome to our Image Captioning Website! This project was made for IEEE MegaProject Submission.</p>
+                    </div>
+                    <div class="page">
+                        <p>This project uses a deep learning image captioning model consisting of an encoder-decoder CNN-RNN architecture. It uses a pretrained ResNet50 model as the encoder CNN to extract visual features from input images. This encoder outputs a feature vector for each image. The decoder is an LSTM RNN that takes this encoded image feature vector along with an input sequence of tokens (word embeddings) representing the caption so far. As it outputs predictions for the next word at each timestep, this allows the model to generate the caption one word at a time.</p>
+                    </div>
+                    <div class="page">
+                        <p># Thala For a Reason</p>
+                    </div>
+                </div>
+        </section>
+    </main>
+    
+</body>
+</html>
