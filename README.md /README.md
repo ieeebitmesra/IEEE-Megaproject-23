@@ -66,10 +66,17 @@ This project draws inspiration from the MNIST dataset and acknowledges the valua
 
 
 
+VISUALEXPLANATION:
+
+https://github.com/Ashis153/IEEE-Megaproject-23/assets/153770981/f68cbef5-db24-4b04-9153-71ab0476be42
+
+
+
+
 
 https://github.com/Ashis153/IEEE-Megaproject-23/assets/153770981/c20861d5-783c-42e8-b6c2-d1520bc6ff94
 
 
 
-VISUALEXPLANATION:
+
 
