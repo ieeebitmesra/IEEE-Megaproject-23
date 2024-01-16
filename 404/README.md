@@ -19,6 +19,7 @@ The News X Project is an ambitious endeavor that automates the transformation of
 - Python
 - Google Cloud Console
 - React, TailwindCSS
+- OpenCV
 - ...
 
 ## Achievement So Far
@@ -54,6 +55,7 @@ Go to the Google Colab Notebook, connect it to a VM and run the individual cells
 ## Code Sample/Link to Hosted Website
 
 Colab Link: https://colab.research.google.com/drive/15sgeu9z4mFa0UQVPg2jusZKl8yFqolPD#scrollTo=1y-gUjHgCjNo
+
 Hosted Website link: https://news-x-frontend-eight.vercel.app/
 
 ### Code Sample
