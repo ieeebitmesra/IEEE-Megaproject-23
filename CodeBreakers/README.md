@@ -1,10 +1,10 @@
-# MegaProject_Naman_Harsh_Sudhanshu
+# MegaProject
 
 #Team Details:
 
-Naman Das, Btech/10762/22
-Sudhanshu Pandey, Btech/10126/22
-Harsh Reddy, Btech/10784/22
+1.Naman Das, Btech/10762/22
+2.Sudhanshu Pandey, Btech/10126/22
+3.Harsh Reddy, Btech/10784/22
 
 Project Overview: Streamlining School Bus Services
 
