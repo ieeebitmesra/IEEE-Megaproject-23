@@ -1,0 +1,36 @@
+.gradient-background {
+    background: linear-gradient(90deg, #36cdffcf, #ff7b8f, #ef8172);
+    background-size: 180% 180%;
+    animation: gradient-animation 18s ease infinite;
+}
+
+@keyframes gradient-animation {
+0% {
+background-position: 0% 50%;
+}
+50% {
+background-position: 100% 50%;
+}
+100% {
+background-position: 0% 50%;
+}
+}
+.d-block{
+    border-radius: 50%;
+}
+.btn{
+    padding: 6px;
+}
+
+.navbarr{
+    background-color: rgb(19, 19, 19);
+
+}
+
+.container-footer{
+    background-color: rgb(19, 19, 19);
+}
+
+.wp{
+    margin-top: 10px;
+}

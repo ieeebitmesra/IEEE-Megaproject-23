@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+    function redirectToPageL() {
+        window.location.href = 'login.html';
+    }
+</script>
+<script>
+    function redirectToPageS() {
+        window.location.href = 'signup.html';
+    }
+</script>
+    <meta charset="UTF-8">
+    <title>Login | Signup</title>
+    <link rel="icon" href="../assest/image/logo2.png" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Salsa&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/front.css">
+</head>
+<body>
+    
+    <section>
+        <div class="container">
+          <div class="box">
+            <div class="image">
+                <img src="../assest/image/logo-black.png" alt="logo" height="100">
+            </div>
+            <div class="quote">
+                <h2 class="text">Don't store, Just sell it!</h2>
+            </div>
+            <div class="button-container">
+                <div class="login-button">
+                    <button onclick="redirectToPageL()" class="login">Login</button>
+                </div>
+                <div class="signup-button">
+                    <button onclick="redirectToPageS()" class="signup">Sign Up</button>
+                </div>
+            </div>
+          </div>
+        </div>
+    </section>
+
+</body>
+</html>

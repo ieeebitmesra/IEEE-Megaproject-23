@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sell Items</title>
+    <link rel="icon" href="../assest/image/logo2.png" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Signika&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/sell.css">
+</head>
+<body>
+    <div class="container">
+        <div class="product">
+            <img src="../assest/image/logo-black.png" alt="logo" height="90" width="90"> 
+           
+        </div>
+        <div class="categories">
+            <div class="data">
+                <form action="/action_page.php">
+                    <label for="product" id="lbl-pro" class="labels">Product</label> 
+                    <input type="text" id="product" required class="inputs">
+
+                    <input type="text" id="price" required class="inputs">
+                    <label for="price" id="lbl-pri" class="labels">Price</label>
+            
+                    <label for="description" class="labels">Description</label>
+                    <input type="text" id="description" required maxlength="63" class="inputs">
+                </form>
+            </div>
+
+        
+            <div class="checks">
+                <div class="checkbox-wrapper-13">
+                    <input id="c1-13" type="checkbox">
+                    <label for="c1-13">Electronics</label>
+                </div>
+
+                <div class="checkbox-wrapper-13">
+                    <input id="cycle" type="checkbox">
+                    <label for="cycle">Cycle</label>
+                </div>
+
+                <div class="checkbox-wrapper-13">
+                    <input id="books" type="checkbox">
+                    <label for="books">Books</label>
+                </div>
+
+                <div class="checkbox-wrapper-13">
+                    <input id="clothes" type="checkbox">
+                    <label for="clothes">Clothes</label>
+                </div>
+
+                <div class="checkbox-wrapper-13">
+                    <input id="others" type="checkbox">
+                    <label for="others">Others</label>
+                </div>
+            </div>
+
+            <div class="social">
+                <input type="text" id="insta" required class="inputs">
+                <label for="insta" id="lbl-insta" class="labels">Instagram</label>
+
+                <label for="whatsapp" id="lbl-wp" class="labels">Whatsapp</label> 
+                <input type="text" id="whatsapp" class="inputs">
+            </div>
+
+            <div class="upload">
+                <form action="/action_page.php">
+                    <input type="file" id="myFile" name="filename" hidden required>
+                    <label for="myFile" class="upload-btn">Choose File</label>
+
+                    <input type="submit" class="submit" value="Post">
+                </form>
+            </div>
+    </div>
+</body>
+</html>
