@@ -137,4 +137,8 @@ To run the BIT-KART project locally, follow these steps:
 ![Representation](sample/5.png)
 ![Representation](sample/7.png)
 
-## Link to Hosted Website [here](https://8fhtzy-5173.csb.app)
+
+
+## Sample video Link [Click here](https://www.youtube.com/watch?v=RcAM1kb56v8) (Recommended)
+
+## Link to Hosted Website [Click here](https://8fhtzy-5173.csb.app) (may lag)
