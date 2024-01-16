@@ -58,6 +58,8 @@ Colab Link: https://colab.research.google.com/drive/15sgeu9z4mFa0UQVPg2jusZKl8yF
 
 Hosted Website link: https://news-x-frontend-eight.vercel.app/
 
+YT Channel: https://www.youtube.com/@AnshumanTomar-mq8kh/shorts
+
 ### Code Sample
 
 ```bash
