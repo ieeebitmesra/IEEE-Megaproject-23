@@ -1,0 +1,147 @@
+<style>
+    /* Reset default margin and padding */
+body, h1, form, input, button {
+    margin: 0;
+    padding: 0;
+}
+
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    background-image: url('https://images.pexels.com/photos/68427/pexels-photo-68427.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
+    background-repeat: no-repeat;
+    background-attachment: fixed; 
+    background-size: 100% 100%;
+}
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+}
+
+section {
+    position: relative; /* For positioning the bus image */
+    background-color: #e1eef4;
+    padding-top: 60px;
+    padding-right:60px;
+    padding-left: 60px;
+    padding-bottom: 60px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-size: cover;
+    background-position: center;
+    box-shadow: 0 0 10px #F4EEE0; /* Adding a shadow for depth */
+    transform: perspective(1000px) translateZ(100px);
+    margin-top: 90px;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 1em;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    
+}
+
+input[type="email"],
+input[type="password"] {
+    margin-bottom: 1em;
+    padding: 0.5em;
+    border-radius: 3px;
+    border: 1px solid #e0d2d2;
+    height: 30px;
+    border-radius: 10px;
+}
+
+button {
+    padding: 0.7em;
+    border: none;
+    border-radius: 3px;
+    background-color: #333;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 10px;
+    background-color: #5235f4ea;
+}
+
+button:hover {
+    background-color: #1c83ea;
+    animation: increase-size 0.3s forwards;
+
+}
+
+@keyframes increase-size {
+    0% {
+      transform: scale(1);
+   }
+    100% {
+      transform: scale(1.06);
+   }
+  }
+
+p {
+    text-align: center;
+    margin-top: 1em;
+}
+
+a {
+    color: blue;
+    
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.LoginAsContainer{
+    display: flex;
+    justify-content: space-around;
+}
+section > h4{
+    color: grey;
+    margin-left: 10px;
+}
+.LoginAsContainer > button{
+    width: 120px;
+}
+.error{
+    color:red;
+}
+</style>
+<head>
+    <title>Login</title>
+</head>
+<body>
+    <main>
+    <section>
+        <h1>User Login</h1>
+        <form action="/login" method="POST" >
+            <input type="email" name="email" placeholder="Email" required>
+            <input type="password" name="password" placeholder="Password" required>
+            <label for="Type">Who you are?</label>
+
+            <select name="type" >
+              <option value="student">Student</option>
+              <option value="driver">Driver</option>
+            </select>
+            <br>
+            <button type="submit">Login</button>
+        </form>
+        <p>Don't have an account yet? <a href="/register"> <u>Register</u></a></p>
+        <% if(locals.error){ %>
+            <br> <p class="error"><%= error %></p>
+             <%}%>
+       
+        
+       
+    </div>
+    </section>
+    </main>
+</body>
+</html>

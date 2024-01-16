@@ -1,0 +1,7 @@
+flask
+psycopg2
+pandas
+scikit-learn
+googlemaps
+requests
+BeautifulSoup4

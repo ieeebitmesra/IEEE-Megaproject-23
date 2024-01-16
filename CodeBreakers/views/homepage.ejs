@@ -1,0 +1,1075 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Transport Made Easy</title>
+
+  <!-- Link CSS  -->
+ <style>
+@import url("https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Be Vietnam Pro", sans-serif;
+}
+
+#wrapper {
+  width: 100%;
+  height: 100vh;
+  overflow-y: auto;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+/* Header Start  */
+header {
+  width: 100%;
+  /* height: auto; */
+  display: flex;
+  padding: 10px 50px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+header .logo {
+  display: flex;
+  justify-content: baseline;
+  align-items: center;
+}
+
+header .logo img {
+  width: 70px;
+}
+
+.logoText {
+  margin-left: -0.8rem;
+  font-size: 28px;
+}
+
+nav ul {
+  display: flex;
+  margin-right: 4em;
+  padding: 0 4em;
+  gap: 2rem;
+}
+
+nav ul li {
+  list-style-type: none;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #1f1f1f;
+  transition: font-weight 0.3s;
+  font-size: 20px;
+  line-height: 17px;
+  display: inline-block;
+}
+
+nav ul li a:hover {
+  transform: scale(1.02);
+  font-weight: bold;
+}
+
+/* Header End */
+
+/* Hero Section Start  */
+.heroSection {
+  gap: 5rem;
+  margin: 4rem auto;
+  padding: 0 1rem;
+  padding-bottom: 8rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: 1200px;
+}
+
+.infoContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  justify-content: center;
+  /* width: 100%; */
+}
+
+.fadedText {
+  user-select: none;
+  font-size: 6em;
+  color: #e7e7e7;
+  bottom: -16%;
+  left: 0;
+  font-weight: bold;
+}
+
+.absolute {
+  position: absolute;
+}
+
+.heading {
+  font-size: 35px;
+  color: #343d68;
+  line-height: 30px;
+}
+
+.role {
+  color: #4e45d5;
+  font-weight: 800;
+}
+
+.subHeading {
+  font-size: 45px;
+  line-height: 40px;
+}
+
+.desc {
+  font-size: 16px;
+  margin-top: 1rem;
+  width: 70%;
+  font-weight: 500;
+}
+
+.btn {
+  background-color: #e84949;
+  width: 180px;
+  color: white;
+  padding: 0.8rem 2.3rem;
+  box-shadow: 5px 5px 7px 0px #0000003f;
+  font-size: 18px;
+  cursor: pointer;
+  transition: all 0.5s;
+  font-weight: 500;
+  border: solid 3px transparent;
+  position: relative;
+  z-index: 1;
+  display: inline;
+}
+
+.btn::before {
+  content: "";
+  position: absolute;
+  background-color: #fff;
+  top: 0px;
+  left: 0;
+  right: 0;
+  bottom: 0px;
+  z-index: -1;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: all 0.8s;
+}
+
+.btn:hover::before {
+  transform: scaleX(1);
+}
+
+.btn:hover {
+  border: solid 3px #e84949;
+  color: black;
+}
+
+.imgContainer {
+  position: relative;
+}
+
+.userImage {
+  padding: 2.5rem;
+  transition: all 1s;
+  animation: scaleImage 5s linear infinite;
+  width: 345px;
+  height: 390px;
+}
+
+@keyframes scaleImage {
+  0% {
+    scale: 1;
+    filter: grayscale(1);
+  }
+
+  50% {
+    filter: grayscale(0);
+    box-shadow: 3px 3px 10px black;
+    scale: 0.9;
+  }
+
+  100% {
+    scale: 1;
+    filter: grayscale(1);
+  }
+}
+
+.userImage img {
+  z-index: -9;
+  width: 100%;
+}
+
+.icons {
+  z-index: 9;
+}
+
+.iconDots {
+  bottom: -1rem;
+  right: 0;
+  animation: dotsAnimation 5s linear infinite;
+}
+
+@keyframes dotsAnimation {
+  50% {
+    transform: translateY(-15px);
+  }
+}
+
+.iconZigZag {
+  z-index: 10;
+  top: 1.5em;
+  left: -0.3em;
+  animation: zigzagAnimation 5s infinite;
+}
+
+@keyframes zigzagAnimation {
+  50% {
+    left: 5%;
+    top: 3%;
+  }
+}
+
+.icon-cube {
+  z-index: 9;
+  top: -0.8em;
+  right: 1em;
+  animation-name: cubeRotate;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes cubeRotate {
+  0% {
+    transform: rotateY(0deg) translateY(0px);
+  }
+  50% {
+    transform: rotateY(180deg) translateY(-12px);
+  }
+  100% {
+    transform: rotateY(360deg) translateY(0px);
+  }
+}
+
+.icon-circle {
+  z-index: 9;
+  left: 0;
+  bottom: 0;
+  animation-name: shakeEffect;
+  animation-duration: 6s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+@keyframes shakeEffect {
+  50% {
+    left: 5%;
+    bottom: 10%;
+  }
+}
+.icon-plus {
+  z-index: 9;
+  top: -0.8rem;
+  left: 50%;
+  animation: shakeEffectPlus 5s ease-in infinite;
+}
+
+@keyframes shakeEffectPlus {
+  50% {
+    top: 2%;
+    left: 48%;
+  }
+}
+
+/* Hero Section Ends  */
+
+/* Projects Section  */
+.projectSection {
+  margin-top: 4rem;
+  background-color: #e7e7e7;
+}
+
+.projectTitle {
+  color: #e84949;
+  font-size: 90px;
+  line-height: 75px;
+  padding: 50px 0 30px;
+  text-align: center;
+}
+
+.projectContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 120px;
+  /* width: 100%; */
+}
+
+#project1 {
+  background-image: url(./images/review-background.jpg); 
+  right: 5%;
+}
+
+
+
+.projectCard {
+  width: 80%;
+  height: 550px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+  box-shadow: 0px 0px 40px #1f1f1f;
+  margin: 2rem auto;
+  z-index: 2;
+}
+
+.projectCard::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background: linear-gradient(45deg, #343d68, #343d68be, #343d687c);
+  z-index: 1;
+  transition: 0.5s all;
+  transform-origin: left;
+  transform: scaleX(0);
+}
+
+.projectCard:hover::before {
+  transform: scaleX(1);
+}
+
+.projectNumber {
+  position: absolute;
+  font-size: 200px;
+  font-weight: 600;
+  color: #fff;
+  display: none;
+  z-index: 10;
+  transition: 0.8s;
+}
+
+
+
+.leftNumber {
+  top: -45px;
+  left: -45px;
+}
+
+.projectCard:hover .projectNumber {
+  display: block;
+}
+
+.projectCard::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: #1f1f1f9a;
+  z-index: 0;
+}
+
+.projectContent {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  color: white;
+  padding: 2em;
+  bottom: 30%;
+  position: absolute;
+  z-index: 5;
+  transition: all 0.4s;
+}
+
+.leftProjectContent {
+  left: 5%;
+}
+
+.rightProjectContent {
+  right: 5%;
+}
+
+.projectSkillsContainer {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 60%;
+  gap: 1em;
+}
+
+.projectSkill {
+  width: 40px;
+}
+.projectHeading {
+  font-size: 20px;
+  font-weight: bold;
+  line-height: 3rem;
+}
+
+.projectSubHeading {
+  font-size: 16px;
+  font-style: italic;
+  width: 70%;
+}
+
+.projectCard:hover .projectContent {
+  transform: scale(1.1);
+}
+
+.btnGroup {
+  display: flex;
+  gap: 0.9rem;
+  align-items: center;
+}
+
+.btnGroup .btnProject {
+  border: none;
+  outline: none;
+}
+.icon {
+  cursor: pointer;
+  color: white;
+  font-size: 35px;
+  transition: all 0.4s;
+}
+
+.icon:hover {
+  color: #e84949;
+}
+
+/* Project Section End  */
+
+/* Skill Section Start  */
+.skillContainer {
+  position: relative;
+  /* display: flex; */
+  padding: 5rem;
+  margin: 10rem auto;
+  gap: 30px;
+}
+
+.leftSkillContainer {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.skillHeading {
+  color: #e84949;
+  font-weight: 700;
+  font-size: 50px;
+  line-height: 50px;
+}
+
+.skillHeading span {
+  font-size: 90px;
+}
+
+.skillSubHeading {
+  margin-top: 1rem;
+  width: 85%;
+  text-align: justify;
+}
+.skillSubHeading p {
+  margin: 15px 0;
+}
+.employee-section {
+  display: flex;
+  text-align: center;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+
+
+.employees-card {
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+  width: 400px;
+  padding: 20px;
+  border-radius: 5px;
+  margin: 10px;
+}
+
+.employees-card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+.employees-container {
+  padding: 2px 16px;
+}
+
+.profile-photo-of-employees {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin: 20px;
+}
+
+@keyframes blobAnimation {
+  50% {
+    top: 54%;
+    left: 46%;
+  }
+}
+
+
+
+/* Skill Section End  */
+
+/* Contact Me Section Start  */
+.contactMeSection {
+  width: 100%;
+  background-color: #e7e7e7;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.container h2 {
+  font-size: 5em;
+  padding-top: 2rem;
+  color: #e84949;
+}
+
+.container h3 {
+  font-size: 3em;
+  color: #343d68aa;
+}
+
+.contactUsForm {
+  display: flex;
+  margin-top: 25px;
+  justify-content: center;
+  align-items: center;
+}
+
+.contactUsForm form {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+/* 
+.formFieldContainer{
+  width: 100%;
+} */
+
+.formField {
+  width: 100%;
+  height: 42px;
+  padding: 0 2rem;
+  font-size: 18px;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 2px 2px 10px #1f1f1f;
+  background: #ffffff97;
+  font-weight: 500;
+}
+
+.formfield:focus {
+  border: none;
+}
+
+.formFieldContainer textarea {
+  height: auto;
+  padding-top: 1rem;
+}
+
+.formBtn .btn {
+  transition: 0.5s;
+  border: none;
+  font-size: 1.4rem;
+  margin: 1rem 0;
+}
+
+.formBtn .btn:hover {
+  transform: scale(0.9);
+}
+
+.formBtn .btn i {
+  padding: 0 1rem;
+  font-size: 1.5rem;
+}
+
+/* Contact Me Section Ends  */
+
+/* Footer Section Start  */
+footer {
+  background: #343d68;
+  position: relative;
+  padding: 5rem;
+}
+
+.footerFadedText {
+  font-size: 5em;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  color: #535c87;
+  user-select: none;
+}
+
+.footerContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.2rem;
+}
+
+.linkContainer {
+  display: flex;
+  gap: 1.2em;
+}
+
+.linkContainer div a {
+  color: white;
+  text-decoration: none;
+  transition: all 0.6s;
+}
+
+.linkContainer div a:hover{
+  color: #e84949;
+}
+
+.iconContainer{
+  display: flex;
+  gap: 1rem;
+}
+.checked {
+  color: orange;
+ 
+}
+
+.star {
+            color: #ccc;
+            font-size: 50px;
+            border: none;
+            background: none;
+            cursor: pointer;
+            outline: none;
+            transition: color 0.3s ease-in-out;
+        }
+
+        .star:hover,
+        .star:hover ~ .star {
+            color: orange;
+        }
+
+        .star:focus {
+            outline: none;
+        }
+
+        .star-rating {
+            user-select: none;
+        }
+
+
+ </style>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <!-- Favicon  -->
+  <link rel="shortcut icon" href="./Images/userAsset/icon.ico" type="image/x-icon" />
+</head>
+
+<body>
+  <div id="wrapper">
+    <!-- Header Start -->
+    <header>
+      <div class="logo">
+     
+        <h2 class="logoText">Transport Made Easy</h2>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="#projects">Our Reviews</a></li>
+          <li><a href="#skills">About Our Company</a></li>
+          <li><a href="#contactMe">Contact Me</a></li>
+        </ul>
+      </nav>
+    </header>
+    <!-- Header End  -->
+
+    <!-- Hero Section Start  -->
+    <section class="heroSection">
+      <h3 class="fadedText absolute">Reviews From Students</h3>
+      <div class="infoContainer">
+        <div class="heading">This is a Transport Company</div>
+        <div class="heading subHeading">
+          <span class="role"></span>
+        </div>
+        <p class="desc">
+          "On the road to education, we're your reliable travel companion."
+        </p>
+        
+          <form action="/register" method="get" >
+          <input type="submit" class="btn" value="Sign Up">
+        </form> 
+        
+        <form action="/login" method="get" >
+          <input type="submit" class="btn" value="Log In">
+        </form> 
+      </div>
+      <div class="imgContainer">
+        <div class="absolute icons iconDots">
+          <img src="./images/userAsset/dots.png" alt="" />
+        </div>
+        <div class="absolute icons icon-cube">
+          <img src="./images/userAsset/cube.png" alt="" />
+        </div>
+        <div class="absolute icons icon-circle">
+          <img src="./images/userAsset/circle.png" alt="" />
+        </div>
+        <div class="absolute icons iconZigZag">
+          <img src="./images/userAsset/zigzags.png" alt="" />
+        </div>
+        <div class="absolute icons icon-plus">
+          <img src="./images/userAsset/plus.png" alt="" />
+        </div>
+        <div class="">
+          <div class="userImage">
+            <!-- <img src="./images/userAsset/priyansh.jpg" width="345px" height="390px" alt="" /> -->
+            <img src="./images/profile-photo.png" alt="" />
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Hero Section End  -->
+
+    <!-- Project Section Start -->
+    <section id="projects" class="projectSection">
+      <h2 class="projectTitle">Our Reviews : </h2>
+
+    <% let reviewNumber=Math.floor(Math.random()*data.length)  %>
+
+
+      <div class="projectContainer">
+        <div class="projectCard" id="project1">
+          <div class="projectNumber rightNumber">01  
+           
+             </div>
+          <div class="projectContent leftProjectContent"> 
+           
+            <h6 class="projectHeading">  
+              <%    for(var i=0; i<data[reviewNumber].stars; i++){%>
+                <span class="fa fa-star checked"></span>
+                <%}%>
+                <br>
+             Name Of Student : <%= data[reviewNumber].name_of_student %> <br>
+             Review : <%= data[reviewNumber].review %>
+            
+            
+            
+            </h6>  
+          </div>
+        </div>
+      </div>
+      <% reviewNumber=(reviewNumber+1)%data.length %>
+
+      <div class="projectContainer">
+        <div class="projectCard" id="project1">
+          <div class="projectNumber rightNumber">02  
+           
+             </div>
+          <div class="projectContent leftProjectContent"> 
+           
+            <h6 class="projectHeading">  
+              <%    for(var i=0; i<data[reviewNumber].stars; i++){%>
+                <span class="fa fa-star checked"></span>
+                <%}%>
+                <br>
+             Name Of Student : <%= data[reviewNumber].name_of_student %> <br>
+             Review : <%= data[reviewNumber].review %>
+            
+            
+            
+            </h6>  
+          </div>
+        </div>
+      </div>
+
+      <% reviewNumber=(reviewNumber+1)%data.length %>
+      <div class="projectContainer">
+        <div class="projectCard" id="project1">
+          <div class="projectNumber rightNumber">03  
+           
+             </div>
+          <div class="projectContent leftProjectContent"> 
+           
+            <h6 class="projectHeading">  
+              <%    for(var i=0; i<data[reviewNumber].stars; i++){%>
+                <span class="fa fa-star checked"></span>
+                <%}%>
+                <br>
+             Name Of Student : <%= data[reviewNumber].name_of_student %> <br>
+             Review : <%= data[reviewNumber].review %>
+            
+            
+            
+            </h6>  
+          </div>
+        </div>
+      </div>
+
+
+      <% reviewNumber=(reviewNumber+1)%data.length %>
+      <div class="projectContainer">
+        <div class="projectCard" id="project1">
+          <div class="projectNumber rightNumber">04 
+           
+             </div>
+          <div class="projectContent leftProjectContent"> 
+           
+            <h6 class="projectHeading">  
+              <%    for(var i=0; i<data[reviewNumber].stars; i++){%>
+                <span class="fa fa-star checked"></span>
+                <%}%>
+                <br>
+             Name Of Student : <%= data[reviewNumber].name_of_student %> <br>
+             Review : <%= data[reviewNumber].review %>
+            
+            
+            
+            </h6>  
+          </div>
+        </div>
+      </div>
+
+      <% reviewNumber=(reviewNumber+1)%data.length %>
+      <div class="projectContainer">
+        <div class="projectCard" id="project1">
+          <div class="projectNumber rightNumber">05  
+           
+             </div>
+          <div class="projectContent leftProjectContent"> 
+           
+            <h6 class="projectHeading">  
+              <%    for(var i=0; i<data[reviewNumber].stars; i++){%>
+                <span class="fa fa-star checked"></span>
+                <%}%>
+                <br>
+             Name Of Student : <%= data[reviewNumber].name_of_student %> <br>
+             Review : <%= data[reviewNumber].review %>
+            
+            
+            
+            </h6>  
+          </div>
+        </div>
+      </div>
+      
+    </section>
+    <!-- Project Section End  -->
+
+    <!-- about us  Section Start  -->
+    <section class="skillContainer" id="skills">
+
+      <div class="leftSkillContainer">
+        <h2 class="skillHeading"> <br />About Our Employess :</h2>
+        <div class="skillSubHeading">
+          <p>
+           Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+           Ab ducimus dolores iusto nihil veniam doloremque quo veritatis 
+           assumenda adipisci repellat quasi consectetur tenetur optio esse 
+           quidem aperiam corrupti alias vitae, hic quos? Exercitationem quidem 
+           mollitia repudiandae, ut dolore non et cupiditate eaque ipsum quod in 
+           voluptatibus cum quas assumenda officia pariatur inventore rerum a 
+           aliquam, itaque laudantium. Temporibus nobis quas incidunt, odio ratione
+            aut exercitationem! Fugit, sequi commodi expedita error atque enim quas
+             nobis iure nostrum dignissimos sunt possimus harum impedit ex laudantium
+              dicta praesentium officiis natus? Consequatur ipsa nam, non molestiae 
+              dignissimos laboriosam tenetur quod eveniet enim accusantium eius.
+          </p>
+        </div>
+      </div>
+
+      <div class="employee-section">
+        <div class="employees-card">
+          <img class="profile-photo-of-employees" src="./images/harsh.jpg" alt="Profile Photo">
+          <div class="employees-container">
+              <h4><b>John Doe</b></h4>
+              <p>Architect & Engineer</p>
+              <p>We love to introduce ourselves as two engineers with diverse experience. With every passing day, we strive to be better in terms of work, experience, and growth.</p>
+          </div>
+      </div>
+      
+
+      <div class="employee-section">
+        <div class="employees-card">
+          <img class="profile-photo-of-employees" src="./images/harsh.jpg" alt="Profile Photo">
+          <div class="employees-container">
+              <h4><b>John Doe</b></h4>
+              <p>Architect & Engineer</p>
+              <p>We love to introduce ourselves as two engineers with diverse experience. With every passing day, we strive to be better in terms of work, experience, and growth.</p>
+          </div>
+      </div>
+      
+
+      <div class="employee-section">
+        <div class="employees-card">
+          <img class="profile-photo-of-employees" src="./images/harsh.jpg" alt="Profile Photo">
+          <div class="employees-container">
+              <h4><b>John Doe</b></h4>
+              <p>Architect & Engineer</p>
+              <p>We love to introduce ourselves as two engineers with diverse experience. With every passing day, we strive to be better in terms of work, experience, and growth.</p>
+          </div>
+      </div>
+
+      <div class="employee-section">
+        <div class="employees-card">
+          <img class="profile-photo-of-employees" src="./images/harsh.jpg" alt="Profile Photo">
+          <div class="employees-container">
+              <h4><b>John Doe</b></h4>
+              <p>Architect & Engineer</p>
+              <p>We love to introduce ourselves as two engineers with diverse experience. With every passing day, we strive to be better in terms of work, experience, and growth.</p>
+          </div>
+      </div>
+      
+      
+
+  
+      </div>
+    </section>
+    <!-- Skill Section End  -->
+
+    <!-- Contact Me Section Start  -->
+    <section class="contactMeSection" id="contactMe">
+      <div class="container">
+        <h2>Contact Us :</h2>
+        <h3>Want to Rate Our Website</h3>
+
+        <div class="contactUsForm">
+
+          <form action="/reviews" method="post">
+            <div class="formFieldContainer">
+              <input class="formField" type="text" placeholder="Enter your name" name="name" />
+            </div>
+          
+            <div class="formFieldContainer">
+              <textarea class="formField" name="message" cols="30" rows="10" placeholder="Enter your Review"></textarea>
+            </div>
+          
+            <div class="formFieldContainer">
+              <div class="star-rating">
+                <input type="hidden" name="rating" id="rating" value="0">
+                <button class="star" aria-label="1 Star" tabindex="0">&#9734;</button>
+                <button class="star" aria-label="2 Stars" tabindex="0">&#9734;</button>
+                <button class="star" aria-label="3 Stars" tabindex="0">&#9734;</button>
+                <button class="star" aria-label="4 Stars" tabindex="0">&#9734;</button>
+                <button class="star" aria-label="5 Stars" tabindex="0">&#9734;</button>
+              </div>
+            </div>
+          
+            <div class="formBtn">
+              <button type="submit" class="btn" id="submit-btn" style="width: 500px;">
+                Send Message<i class="submit-icon fa-solid fa-paper-plane"></i>
+              </button>
+            </div>
+          </form>
+
+        </div>
+      </div>
+    </section>
+   
+   
+
+
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+  <script src="https://kit.fontawesome.com/58a810656e.js" crossorigin="anonymous"></script>
+  <script>
+      document.addEventListener("DOMContentLoaded", function (event) {
+        // array with texts to type in typewriter
+        var dataText = [
+          
+          "making school Transport Easy"
+        ];
+
+        // type one text in the typwriter
+        // keeps calling itself until the text is finished
+        function typeWriter(text, i, fnCallback) {
+          // chekc if text isn't finished yet
+          if (i < text.length) {
+            // add next character to h1
+            document.querySelector(".role").innerHTML =
+              text.substring(0, i + 1) + '<span aria-hidden="true"></span>';
+
+            // wait for a while and call this function again for next character
+            setTimeout(function () {
+              typeWriter(text, i + 1, fnCallback);
+            }, 100);
+          }
+          // text finished, call callback if there is a callback function
+          else if (typeof fnCallback == "function") {
+            // call callback after timeout
+            setTimeout(fnCallback, 700);
+          }
+        }
+        // start a typewriter animation for a text in the dataText array
+        function StartTextAnimation(i) {
+          if (typeof dataText[i] == "undefined") {
+            setTimeout(function () {
+              StartTextAnimation(0);
+            }, 20000);
+          }
+          // check if dataText[i] exists
+          if (i < dataText[i].length) {
+            // text exists! start typewriter animation
+            typeWriter(dataText[i], 0, function () {
+              // after callback (and whole text has been animated), start next text
+              StartTextAnimation(i + 1);
+            });
+          }
+        }
+        // start the text animation
+        StartTextAnimation(0);
+      });
+    </script>
+  <script>
+    var typeData = new Typed(".role", {
+      strings: [
+      "making school Transport Easy"
+      ],
+      loop: true,
+      typeSpeed: 400,
+      backSpeed: 160,
+      backDelay: 2000,
+    });
+   
+    let current_star_level = 0;
+  const allStars = document.querySelectorAll('.star');
+  const ratingInput = document.getElementById('rating');
+
+  allStars.forEach((star, i) => {
+    star.onclick = function(event) {
+      event.preventDefault();
+      current_star_level = i + 1;
+      updateStars();
+      ratingInput.value = current_star_level; // Update the hidden input value
+    }
+  });
+
+  function updateStars() {
+    allStars.forEach((star, j) => {
+      if (j < current_star_level) {
+        star.innerHTML = '&#9733;';
+        star.style.color = 'orange';
+      } else {
+        star.innerHTML = '&#9734;';
+        star.style.color = '#ccc';
+      }
+    })
+  }
+</script>
+</body>
+
+</html>
