@@ -26,8 +26,10 @@ FEATURES:
 Þ Node.js and Express.js power the backend, handling HTTP requests and routing. We are planning to use MongoDB, a NoSQL database, for storing user data, item listings, and transaction details. The backend will manage user authentication, item postings, chat functionality, and online payments.
 
 
+
 Run Commands:
-In frontend folder, npm run dev
+
+In frontend  folder, npm run dev
 In backend folder, node index.js
 Note: Host backend on port 3000, and frontend on some other port
 
