@@ -1,0 +1,94 @@
+
+.gradient-background {
+    background: linear-gradient(316deg, #fff9f9c7, #66fcf7, #b7b7b7);
+    background-size: 600% 600%;
+    -webkit-animation: gradient-animation 29s ease infinite;
+    -moz-animation: gradient-animation 29s ease infinite;
+    -o-animation: gradient-animation 29s ease infinite;
+    animation: gradient-animation 29s ease infinite;
+}
+@-webkit-keyframes gradient-animation {
+    0%{background-position:2% 0%}
+    50%{background-position:99% 100%}
+    100%{background-position:2% 0%}
+}
+@-moz-keyframes gradient-animation {
+    0%{background-position:2% 0%}
+    50%{background-position:99% 100%}
+    100%{background-position:2% 0%}
+}
+@-o-keyframes gradient-animation {
+    0%{background-position:2% 0%}
+    50%{background-position:99% 100%}
+    100%{background-position:2% 0%}
+}
+@keyframes gradient-animation {
+    0%{background-position:2% 0%}
+    50%{background-position:99% 100%}
+    100%{background-position:2% 0%}
+}
+
+.color{
+    color: white;
+}
+
+
+/*Questions*/
+.box{
+    display: flex;
+    gap: 2rem;
+    padding-top: 2rem;
+    margin: 1rem 1rem;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+@media only screen and (max-width: 768px) {
+    .question{
+        font-size: 24px;
+    }
+}
+
+/*Navbar*/
+.navbarr{
+    background-color: rgb(19, 19, 19);
+
+}
+.nav-link:hover{
+    transform: translateZ(-10px);
+}
+
+/*Footer*/
+.container-footer{
+    background-color: rgb(19, 19, 19);
+}
+
+.wp{
+    margin-top: 10px;
+}
+
+
+
+.btnn{
+    margin-top: 20px;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    gap: 20px;
+}
+
+
+.btnn button{
+    padding: 0.25rem 3rem;
+    border-radius: 10px;
+    background: transparent;
+    border: 1px solid black;
+
+}
+
+.btnn button:hover{
+    
+    color: white;
+    background-color: black;
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.523);
+}
