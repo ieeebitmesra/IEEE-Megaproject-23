@@ -1,0 +1,221 @@
+body {
+  color: white;
+  margin-top: 3rem;
+  background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)),url("introstarting.jpeg");
+  font-family: system-ui;
+  font-size: 15px;
+
+
+}
+.col-8{
+    background: rgba(0,0,0,0.3);
+    color:black;
+    margin-top: 25px;
+    margin-right: 20px;
+    margin-left: 20px;
+    border-radius: 25px;
+
+}
+.col-3{
+    background: rgba(255,255,255,0.3);
+    color: black;
+    margin-top: 25px;
+    margin-right: 20px;
+    margin-left: 15px;
+    border-radius: 25px;
+
+
+}
+
+.row-7{
+    background: rgba(255,255,255,0.3);
+    height: 400px;
+    margin-top: 25px;
+    margin-right: 20px;
+    margin-left: 15px;
+    border-radius: 25px;
+    padding: 25px;
+
+
+}
+.row-5{
+    background: rgba(255,255,255,0.3);
+    height: 200px;
+    margin-top: 25px;
+    margin-right: 20px;
+    margin-left: 15px;
+    border-radius: 25px;
+
+
+}
+.row-7-in{
+    background: rgba(0,0,0,0.6);
+    height: 350px;
+    margin-right: 20px;
+    margin-left: 15px;
+    border-radius: 25px;
+
+}
+
+
+.graph-bar{
+    background-color: rgba(0,128,0,0.6);
+     border-radius: 17px;
+     height:50px;
+     display: flex;
+     justify-content: space-between;
+}
+
+.graph-bar button{
+    margin-left: auto;
+    border-radius: 17px;
+}
+
+
+.intro{
+    padding-left: 200px;
+    padding-top: 100px;
+    padding-right: 200px;
+    font-size: 50px;
+
+}
+.intro1{
+    padding-left: 200px;
+    padding-top: 100px;
+    padding-right: 200px;
+    font-size: 50px;
+
+}
+
+.intro-header{
+   font-size:45px;
+   padding-left:300px;
+   font-weight: 1000;
+   margin-bottom: 2px;
+   height: 10vh;
+
+}
+p{
+    font-size:25px;
+
+}
+
+
+#login{
+    background-color: #7d75b6;
+    color: white;
+    font-size: 20px;
+    font-weight: 500;
+    padding: 0.2em 0.4em;
+    transition: all 0.5s;
+    margin-top: 15px;
+    border-radius: 15px;
+}
+
+
+#login:hover{
+    transform: translateY(-5px);
+    background: green;
+    color: white;
+    border-radius: 25px;
+}
+
+fieldset {
+      border: 5px solid grey;
+      border-radius: 25px;
+      opacity: 1.0;
+      padding: 50px;
+      margin-bottom: 0px;
+      background: black;
+      color: grey;
+    }
+
+.bg-steel {
+  background-color: black;
+}
+
+.content-section {
+    color: white;
+    font-size: 25px;
+    text-align: center;
+    height: 180vh;
+    overflow: hidden;
+    padding : 10px;
+    margin: 0;
+}
+
+
+
+.sidebar {
+  width: 400px;
+  background-color: black;
+  margin-top: 200px; /* Adjust top margin */
+  margin-bottom: 40px; /* Adjust bottom margin */
+  position: fixed;
+  right: 20px;
+  padding: 10px; /* Add padding if necessary */
+  box-sizing: border-box; /* Include padding and border in the element's total width and height */
+}
+
+.account-img {
+  height: 125px;
+  width: 125px;
+  margin-right: 20px;
+  margin-bottom: 16px;
+}
+
+.account-heading {
+  font-size: 2.5rem;
+}
+
+#last{
+  color:black;
+}
+
+#accordionExample{
+   margin-top: 10px;
+  
+
+
+}
+
+.accordion-body{
+    font-weight: 1000;
+
+    margin-right: 50px;
+
+}
+
+.button {
+    -webkit-appearance: button;
+    -moz-appearance: button;
+    appearance: button;
+    text-decoration: none;
+    color: black;
+    background-color: #7d75b6;
+    color: white;
+    border-radius: 5px;
+    font-size: 20px;
+    font-weight: 1000;
+    padding: 0.2em 0.4em;
+    transition: all 0.5s;
+
+
+}
+
+.button:hover{
+    transform: translateY(-10px);
+    background: white;
+    color: red;
+}
+
+
+
+.typewriter {
+    font-family: 'Courier New', monospace;
+    font-size:medium; /* Change this to your desired font size */
+    color: #00ff00;
+    padding-left: 20px;
+    letter-spacing: 2px;
+    overflow: auto;
+}

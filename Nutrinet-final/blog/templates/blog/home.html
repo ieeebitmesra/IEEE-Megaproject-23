@@ -1,0 +1,162 @@
+{%extends "blog/base.html"%}
+{% load crispy_forms_tags %}
+{%block content%}
+    {% if user.is_authenticated %}
+    <div class="container-fluid">
+        <div class="row">
+                <div class= "col-8" style="height: 680px;overflow: auto;">
+                    <div class="row-7" style="overflow: auto;">
+                       <div class = "row-7-in" style="overflow: auto;">
+                           <div class = "graph-bar">
+                               <p style="padding:10px;padding-top: 5px; font-family: serif; ;padding-left: 30px;color: white;"> NutriBot, Personalized HealthCare Assistant</p>
+                               <button type="button" class = "btn btn-success" onclick="location.reload()">
+                                   Refresh
+                               </button>
+                            </div>
+                           <div class="typewriter"  id="chat-history">
+                               {{ chat_history|linebreaks | safe }}
+                           </div>
+                       </div>
+                    </div>
+                    <div class="row-5" style="overflow: auto;padding: 25px;">
+                        <div class = "row-5-in" style="overflow: auto">
+                            <form method="post" action="{% url 'blog-home' %}">
+                                {% csrf_token %}
+                                <div class="chatform" >
+                                    <div class="mb-3">
+                                        <label for="avg" class="form-label">BPM Average Heart Rate from the Week:</label>
+                                        <input type="text" class="form-control" name="avg" required>
+                                    </div>
+
+                                    <div class="mb-3">
+                                        <label for="avg" class="form-label">Time of Highest Spike in Heart Rate:</label>
+                                        <input type="text" class="form-control" name="avg" required>
+                                    </div>
+
+                                    <div class="mb-3">
+                                        <label for="avg" class="form-label">Height:</label>
+                                        <input type="text" class="form-control" name="avg" required>
+                                    </div>
+
+                                    <div class="mb-3">
+                                        <label for="avg" class="form-label">Weight:</label>
+                                        <input type="text" class="form-control" name="avg" required>
+                                    </div>
+
+                                    <div class="mb-3">
+                                        <label for="avg" class="form-label">Age:</label>
+                                        <input type="text" class="form-control" name="avg" required>
+                                    </div>
+
+                                    <div class="mb-3">
+                                        <label for="avg" class="form-label">Medical History:</label>
+                                        <input type="text" class="form-control" name="avg" required>
+                                    </div>
+
+                                    <div class="mb-3">
+                                        <label for="avg" class="form-label">Glucose Lvl:</label>
+                                        <input type="text" class="form-control" name="avg" required>
+                                    </div>
+
+                                    <div class="mb-3">
+                                        <label for="avg" class="form-label">Sp O2:</label>
+                                        <input type="text" class="form-control" name="spo" required>
+                                    </div>
+                                      <button type="submit" class="btn btn-primary">Send</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-3"  style="height: 680px; padding-left:0; padding-right: 0;">
+                  
+                    <div class="accordion" id="accordionExample" >
+                      <div class="accordion-item" style = "border-radius: 17px; background: rgba(255,255,255,0.3)" >
+                        <h2 class="accordion-header"  id="headingOne" style = "background: rgba(255,255,255,0.3); border-radius: 10px;" >
+                          <button class="accordion-button"  style = "border-radius: 10px 10px 0 0; background: rgba(0,0,0,0.9); color:white;" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                            Graph
+                          </button>
+                        </h2>
+                        <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                          <div class="accordion-body" >
+                            Plotly, an advanced data visualization tool, collaborates seamlessly with Arduino to orchestrate a visually stunning
+                              representation of data. With a meticulous integration, Plotly reads data streams from Arduino, transforming them into
+                              an elegant graph that captures the intricacies of the underlying information.  The synergy between Plotly and Arduino
+                              presents a seamless blend of technological prowess and aesthetic finesse, where raw data is transformed into a graph
+                              that speaks volumes through its graphical brilliance.
+
+                          </div>
+                            <div>
+                                <a href="{% url 'graph'%}" class="button" style="margin-left: 150px;" >Graph</a>
+                            </div>
+                        </div>
+
+                      </div>
+                      <div class="accordion-item" style = "background: rgba(255,255,255,0.3)">
+                        <h2 class="accordion-header" id="headingTwo">
+                          <button class="accordion-button collapsed" style = " background: rgba(0,0,0,0.9); color:white;" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                            About
+                          </button>
+                        </h2>
+                        <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                          <div class="accordion-body">
+                            <strong>NutriNet- Your One-Stop To Health</strong> NutriNet is a concept designed by three inspired college students to reduce deaths caused by heart diseases.
+                              We have seamlessly integrated hardware and software to give our users a wonderful experience while using this App. We are measuring the heart beat using Arduino whose data is being used to visually
+                              stunning representation of the user's timely heartbeat and help in analyze his heart beat throughout the day. Please feel free to click on the about page and read
+                              more about what this site was accurately made for.</div>
+                            <div>
+                                <a href="{% url 'blog-about'%}" class="button" style="margin-left: 150px;" >About</a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="accordion-item" style = "border-radius: 0 0 10px 10px;background: rgba(255,255,255,0.3)">
+                        <h2 class="accordion-header" id="headingThree" style=" border-radius: 10px;">
+                          <button class="accordion-button collapsed" style = "border-radius: 0 0 10px 10px; background: rgba(0,0,0,0.9); color:white;" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                            Profile
+                          </button>
+                        </h2>
+                        <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                          <div class="accordion-body">
+                            <strong>A profile page is a digital space that serves as a personalized representation</strong>We have integrated our profile page
+                              efficiently with our backend, which gives the user a seamless experience while changing his personal information which includes his
+                              username, emailID, along with his details of age, weight and height. We keep all our users information personal. Please feel free to click on
+                              the button below and visit our profile page and change our personal information
+                          </div>
+                            <div>
+                                <a href="{% url 'profile'%}" class="button" style="margin-left: 150px;" >Profile</a>
+                           </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                </div>
+        </div>
+    </div>
+    <script>
+      var chatHistory = document.getElementById("chat-history").innerText;
+      var outputElement = document.getElementById("chat-history");
+      
+      var speed = 10;
+      var index = 0;
+      
+      function typeWriter() {
+        if (index < chatHistory.length) {
+          outputElement.innerHTML += chatHistory.charAt(index);
+          index++;
+          setTimeout(typeWriter, speed);
+        }
+      }
+      
+      document.addEventListener('DOMContentLoaded', function () {
+        // Clear the initial content
+        outputElement.innerHTML = "";
+      
+        // Call the typewriter function when the page loads
+        typeWriter();
+      });
+      </script>
+
+    {% endif %}
+
+{%endblock content%}
