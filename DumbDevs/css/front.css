@@ -1,0 +1,78 @@
+*{
+    padding: 0px;
+    margin: 0px;
+
+}
+
+body{
+    background-image: url(../assest/image/bg-sell.jpeg);
+    background-position: center;
+    background-size: 100%;
+
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+    background-color: rgba(222, 222, 222, 0.231);
+    backdrop-filter: blur(6px) saturate(180%);
+}
+
+.box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 500px;
+    width: 350px;
+    flex-direction: column;
+}
+
+
+
+.text{
+    font-family: 'Salsa', cursive;
+
+}
+
+.quote{
+    margin-bottom: 30px;
+    cursor: default;
+}
+
+.button-container{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    height: 50px;
+}
+
+button{
+    background: transparent;
+    border: 1px solid black;
+    border-radius: 5px;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    color: rgba(255, 255, 255, 0.772);
+    background-color: rgba(0, 0, 0, 0.728);
+}
+
+.login{
+    padding: 8px 4rem;
+}
+
+.signup{
+    padding: 8px 3.5rem;
+}
+
+button:hover{
+    box-shadow: 1px 1px 10px rgba(255, 255, 255, 0.5);
+    cursor: pointer;
+    border-color: rgba(255, 255, 255, 0.6);
+}
+
+button:focus{
+    cursor: wait;
+}

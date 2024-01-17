@@ -1,0 +1,76 @@
+/*cards*/
+.cards *{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+.card-container{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 35px;
+    margin: 100px 30px;
+}
+.card{
+    width: 250px;
+    background-color: #f4f4f4;
+    box-shadow: 0px 2px 4px rgba( 0, 0, 0, 0.3);
+    overflow: hidden;
+    border-radius: 10px;
+    /* transition: transform 0.6s ease; */
+    transition: scale 0.6s ease
+}
+.card:hover{
+    /* transform: translateY(-20px); */
+    scale: 1.05;
+    box-shadow: 1px 1px 10px;
+}
+.card .card-image{
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+
+}
+.card-content{
+    padding: 20px;
+    padding-top: 8px;
+}
+.card-content h4{
+    font-size: 1rem;
+    margin-bottom: 2px;
+    font-weight: bold;
+}
+.card-content p{
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 7px;
+}
+.card-content h5{
+    margin-bottom: 5px;
+    font-size: 0.9rem;
+    font-weight: lighter;
+}
+
+/*Navbar*/
+.navbarr{
+background-color: rgb(19, 19, 19);
+}
+.nav-link:hover{
+transform: translateZ(30px);
+transform: translateY(1px);
+}
+.dropdown-item:focus{
+    background-color: #191919;
+}
+
+/*Footer*/
+.container-footer{
+    background-color: rgb(19, 19, 19);
+}
+
+.wp{
+    margin-top: 10px;
+    margin-right: 5px;
+}
+

@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "1092343433769",
+    "project_id": "bit-go-adabc",
+    "storage_bucket": "bit-go-adabc.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1092343433769:android:2b2e5e2bfc82ddf88b2a38",
+        "android_client_info": {
+          "package_name": "com.example.bit_go"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAqnSHzyud-_qg4A__146CIx6gukFoo_rg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

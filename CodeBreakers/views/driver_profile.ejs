@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Student Profile</title>
+<style>
+        /* General Styling */
+/* Variables */
+:root {
+    --primary-color: #007bff;
+    --hover-color: #0056b3;
+    --border-color: #ddd;
+    --background-light: #f8f9fa;
+    --shadow-color: rgba(0, 0, 0, 0.1);
+    --font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* General Styling */
+body {
+    font-family: var(--font-family);
+    background-color: var(--background-light);
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+.passport {
+    width: 80%;
+    margin: 20px auto;
+    padding: 30px;
+    border-radius: 8px;
+    background-color: #fff;
+    box-shadow: 0 0 20px var(--shadow-color);
+}
+
+h1, h2 {
+    color: var(--primary-color);
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+h2 {
+    font-size: 24px;
+    margin-bottom: 15px;
+    border-bottom: 2px solid var(--primary-color);
+    padding-bottom: 5px;
+}
+
+/* Profile Information */
+.profile-info,
+.bus-schedule,
+.bus-route,.school-info{
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.profile-info p,
+.bus-schedule p,
+.bus-route p, .school-info p{
+    margin: 5px 0;
+    line-height: 1.6;
+}
+
+/* Table Styling */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+    font-size: 16px;
+}
+
+table th {
+    background-color: var(--primary-color);
+    color: #fff;
+    padding: 12px;
+    text-align: left;
+}
+
+table th,
+table td {
+    border: 1px solid var(--border-color);
+    padding: 12px;
+}
+/* Hover Effects */
+a {
+    color: var(--primary-color);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    text-decoration: underline;
+    color: var(--hover-color);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .passport {
+        width: 90%;
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 32px;
+        margin-bottom: 15px;
+    }
+
+    h2 {
+        font-size: 22px;
+    }
+
+    .profile-info p,
+    .bus-schedule p,
+    .bus-route p,.school-info p{
+        font-size: 14px;
+    }
+}
+.photo{
+    float: right;
+}
+#map {
+    display: flex;
+    margin-left: 20%;
+    margin-right: 30%;
+    height: 500px;
+    width: 60%;
+  }
+    </style>
+</head>
+<body>
+    <div class="passport">
+        <h1>Driver Passport</h1>
+        <div class="profile-info">
+            <h2>Profile Information</h2>
+            <div class="photo">
+                <img src="https://picsum.photos/200" alt="driverPhoto">
+            </div>
+            <p><strong>Name : </strong><%= locals.nameOfDriver %> </p>
+            <p><strong>Driver id : </strong><%= locals.driverId %> </p>
+            <p><strong>contact number : </strong><%= locals.contactNumber %> </p>
+            <p><strong>contact Email : </strong><%= locals.contactEmail %> </p>
+            <p><strong>Licence Number : </strong><%= locals.LicenceNum %> </p>
+            <p><strong>Expiry Date : </strong><%= locals.ExpiryDate %> </p>
+        </div>
+
+            <div class="bus-schedule">
+                <h2>Bus Schedule</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Day</th>
+                            <th>Departure Time</th>
+                            <th>Arrival Time</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <% for (let i = 0; i < busSchedule.length; i++) { %>
+                            <tr>
+                                <td><%= busSchedule[i].day_of_week %></td>
+                                <td><%= busSchedule[i].departure_time %></td>
+                                <td><%= busSchedule[i].arrival_time %></td>
+                            </tr>
+                        <% } %>
+                    </tbody>
+                </table>
+            </div>
+
+        <div class="bus-route">
+            <h2>Bus Route</h2>
+           
+            <p><strong>Origin:</strong> <%= busRoute.origin %></p>
+            <p><strong>Destination:</strong> <%= busRoute.destination %></p>
+        
+        </div>
+                <div id="map"></div>
+                <input type="hidden" id="startLat" value="<%= start.lat %>">
+                <input type="hidden" id="startLng" value="<%= start.lng %>">
+                <input type="hidden" id="endLat" value="<%= end.lat %>">
+                <input type="hidden" id="endLng" value="<%= end.lng %>">
+                <input type="hidden" id="waypoints" value='<%= JSON.stringify(waypoints) %>'>
+                <script>
+                    function initializeMap() {
+                    // Retrieve values from hidden input fields
+                    const start = {
+                        lat: parseFloat(document.getElementById("startLat").value),
+                        lng: parseFloat(document.getElementById("startLng").value)
+                    };
+                    const end = {
+                        lat: parseFloat(document.getElementById("endLat").value),
+                        lng: parseFloat(document.getElementById("endLng").value)
+                    };
+                    const waypointsDataString = document.getElementById("waypoints").value;
+                    const waypointsData = JSON.parse(waypointsDataString);
+
+                    // Transform the array into the required waypoint format
+                    var waypointArr = [];
+                    for (var i = 0; i < waypointsData.length; i++) {
+                        waypointArr.push({
+                        location: {
+                            lat: parseFloat(waypointsData[i].lat),
+                            lng: parseFloat(waypointsData[i].lng)
+                        },
+                        stopover: true
+                        });
+                    }
+                    console.log(waypointArr);
+                    // Map initialization code using retrieved values
+                    const map = new google.maps.Map(document.getElementById("map"), {
+                        center: start,
+                        zoom: 10
+                    });
+
+                    const directionsService = new google.maps.DirectionsService();
+                    const directionsRenderer = new google.maps.DirectionsRenderer({
+                        map: map,
+                        suppressMarkers: true
+                    });
+
+                    const request = {
+                        origin: start,
+                        destination: end,
+                        waypoints: waypointArr,
+                        optimizeWaypoints: true,
+                        travelMode: google.maps.TravelMode.DRIVING,
+                    };
+
+                    directionsService.route(request, function (response, status) {
+                        if (status === 'OK') {
+                        directionsRenderer.setDirections(response);
+
+                        // Suppress default markers for origin and destination
+                        
+
+                        // Create markers for origin and destination without default markers
+                        const originMarker = new google.maps.Marker({
+                            position: start,
+                            map: map,
+                            icon: 'http://maps.google.com/mapfiles/ms/icons/green-dot.png', // Example: Green dot icon for origin
+                            title: 'Origin',
+                        });
+                        for(var i=0;i<waypointArr.length;i++) { 
+                            const waypointMarker = new google.maps.Marker({
+                            position: waypointArr[i].location,
+                            map: map,
+                            icon: 'http://maps.google.com/mapfiles/ms/icons/yellow-dot.png', // Example: Green dot icon for origin
+                            title: 'way',
+                            });
+                        }//
+                        const destMarker = new google.maps.Marker({
+                            position: end,
+                            map: map,
+                            icon: 'http://maps.google.com/mapfiles/ms/icons/red-dot.png', // Example: Yellow dot icon for destination
+                            title: 'Destination'
+                        });
+                        } else {
+                        window.alert('Directions request failed due to ' + status);
+                        }
+                    });
+                    }
+
+                    // Call the map initialization function when the page loads
+                    window.onload = function () {
+                        const apiKey = '<%= apiKey %>';
+                        const apiUrl = `https://maps.googleapis.com/maps/api/js?key=${apiKey}&callback=initializeMap`;
+                
+                        const script = document.createElement('script');
+                        script.src = apiUrl;
+                        script.defer = true;
+                        script.async = true;
+                
+                        document.head.appendChild(script);
+                    };
+                </script>
+        </div>
+    </div>
+</body>
+</html>
