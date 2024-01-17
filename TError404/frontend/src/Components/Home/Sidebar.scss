@@ -1,0 +1,13 @@
+.SidebarMenu{
+   width: 280px;
+   height: 100vh;
+   .side{
+    height: 100vh;
+   background-color: #0D7377;
+   --bs-nav-pills-link-active-bg: #323232;
+   }
+   .activ{
+    background-color:#323232 ;
+    color: white;
+   }
+}
