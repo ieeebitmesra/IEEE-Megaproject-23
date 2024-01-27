@@ -14,7 +14,7 @@ function handleImage(event) {
     };
 
     if (file) {
-        loadingSpinner.classList.remove('hidden'); // Added to show loading spinner while image is being loaded.
+        loadingSpinner.classList.remove('hidden');
         reader.readAsDataURL(file);
     }
 }
@@ -48,5 +48,5 @@ function reset() {
     image.src = ""; 
     image.classList.add('hidden');
     result.innerText = "";
-    loadingSpinner.classList.add('hidden'); // Hide loading spinner when resetting.
+    loadingSpinner.classList.add('hidden'); 
 }
