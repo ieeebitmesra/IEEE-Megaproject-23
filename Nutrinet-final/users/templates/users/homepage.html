@@ -1,0 +1,219 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel=”stylesheet” href=”https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css” />
+    <link rel="stylesheet" type = "text/css" href="{% static 'blog/homepage.css' %}">
+    <link href="{% static 'fontawesomefree/css/fontawesome.css' %}" rel="stylesheet" type="text/css">
+    <link href="{% static 'fontawesomefree/css/brands.css' %}" rel="stylesheet" type="text/css">
+    <link href="{% static 'fontawesomefree/css/solid.css' %}" rel="stylesheet" type="text/css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>ios.annit();
+`
+    {% if title %}
+            <link rel="icon" href="care.png" type="image/png"><title>NutriNet - {{title}}</title>
+        {% else %}
+            <link rel="icon" href="care.png"  type="image/png"><title>NutriNet</title>
+        {% endif %}
+</head>
+<body>
+    <header class="site-header">
+        <nav class="navbar  navbar-dark bg-steel fixed-top">
+            <div class="container" >
+                <!-- Add the SVG icon before the text -->
+                <a class="navbar-brand mr-4" >
+                    <i class="fa-solid fa-heart-pulse fa-beat fa-xl" style="color: #bb0710; " ></i>
+                    NutriNet
+                </a>
+            </div>
+        </nav>
+    </header>
+    
+    <div class = "fade-element"></div>
+    <section id="Introduction" class="text-center">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 section-intro text-center" >
+                    <h2>Welcome to NutriNet - where the heart gets, what it deserves..</h2>
+            </div>
+            <div class="row g-4" >
+                <div class="col-md-4" data-aos="fade-up"
+                data-aos-duration="1000" >
+                    <div class="service">
+                        <div class="service-img">
+                            <i class="fa-solid fa-brain fa-3x" style="color: #ec46a7;"></i>
+                        </div>
+                        <h5 class="mt-5 pt-4">NEUROLOGY CARE</h5>
+                        <p>Nutrinet analyzes heart rate variability to tailor mindfulness exercises, 
+                            enhancing emotional resilience and fostering cognitive coherence for sustained mental well-being.                            
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-4" data-aos="fade-up"
+                data-aos-duration="2000" >
+                    <div class="service">
+                        <div class="service-img">
+                            <i class="fa-solid fa-hand-holding-heart fa-3x" style="color: #34b874;"></i>
+                        </div>
+                        <h5 class="mt-5 pt-4">CARDIOLOGY CARE</h5>
+                        <p>Nutrinet employs graphed monitoring to visualize dynamic cardiological data,continuous analysis, 
+                            Nutrinet subtly integrates real-time alerts, indirectly enhancing emergency responsiveness.</p>
+                    </div>
+                </div>
+                <div class="col-md-4" data-aos="fade-up"
+                data-aos-duration="3000" >
+                    <div class="service">
+                        <div class="service-img">
+                            <i class="fa-solid fa-person-running fa-3x" style="color: #1d5fb6;"></i>
+                        </div>
+                        <h5 class="mt-5 pt-4">PHYSICAL FITNESS</h5>
+                        <p>Nutrinet optimizes exercise regimes by integrating heart rate kinetics, ensuring tailored activities aligned with cardiovascular 
+                            performance metrics.Nutrinet integrates metabolic insights to offer nuanced nutritional guidance.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </section>
+
+
+
+        
+        
+        <div id="quote"> 
+            <p class="quote-text" data-aos="fade-right" data-aos-offset="300"
+            data-aos-easing="ease-in-sine">
+                A healthy heart is a sign of a healthy life.<br>
+                Nurture it with good food, regular exercise, and a positive mindset to keep it beating strong.<br>
+                ~ Dr. Mehmet Oz, <br>a well-known cardiothoracic surgeon.
+            </p>
+        </div>
+        </div>
+        
+        <div id="loginsignin">
+            <p>
+                Welcome to NutriNet. <br> The perfect heaven to take a step towards a more healthy, productive and happy life...
+            </p>
+            <br>
+            {% if user.is_authenticated %}
+            <a href="{% url 'blog-home'%}" class="button" >Dashboard</a>
+            {% else %}
+            <a href="{% url 'register'%}" class="button" style="margin-right: 100px;" >Register</a>
+            <a href="{% url 'login'%}" class="button" >Login</a>
+
+            {% endif %}
+        </div>
+
+    <footer
+            class="text-center text-lg-start text-white"
+            style="background-color: #1c2331"
+            >
+      <!-- Section: Social media -->
+      <section
+               class="d-flex justify-content-between p-4"
+               style="background-color: #6351ce"
+               >
+        <!-- Left -->
+        <div class="me-5">
+          <span>Get connected with us on social networks:</span>
+        </div>
+        <!-- Left -->
+  
+        <!-- Right -->
+        <div>
+          <a href="https://facebook.com" class="text-white me-4">
+            <i class="fab fa-facebook-f"></i>
+          </a>
+          <a href="https://twitter.com" class="text-white me-4">
+            <i class="fab fa-twitter"></i>
+          </a>
+          <a href="https://instagram.com" class="text-white me-4">
+            <i class="fab fa-instagram"></i>
+          </a>
+          <a href="https://linkedin.com" class="text-white me-4">
+            <i class="fab fa-linkedin"></i>
+          </a>
+          <a href="https://github.com/NayanBITMesra/NutriNet-MegaProject" class="text-white me-4">
+            <i class="fab fa-github"></i>
+          </a>
+  
+        </div>
+        <!-- Right -->
+      </section>
+      <!-- Section: Social media -->
+  
+      <!-- Section: Links  -->
+      <section class="">
+        <div class="container text-center text-md-start mt-5">
+          <!-- Grid row -->
+          <div class="row mt-3">
+            <!-- Grid column -->
+            <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+              <!-- Content -->
+              <h6 class="text-uppercase fw-bold">Connect With Us.</h6>
+              <hr
+                  class="mb-4 mt-0 d-inline-block mx-auto"
+                  style="width: 60px; background-color: #7c4dff; height: 2px"
+                  />
+              <p>
+                
+              Your all-in-one solution for personalized health
+              and wellness management. The app was created to make sure that you feel
+              fit and fine all the time. Please free to register if you don't have an
+              account with us.
+              
+              </p>
+            </div>
+            
+            <!-- Grid column -->
+            <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4" style="font-size: 20px;">
+              <!-- Links -->
+              <h6 class="text-uppercase fw-bold">Contact</h6>
+              <hr
+                  class="mb-4 mt-0 d-inline-block mx-auto"
+                  style="width: 60px; font: 100; background-color: #7c4dff; height: 2px"
+                  />
+              <p><i class="fas fa-home mr-3"></i> Hostel-7, BIT Mesra</p>
+              <p><i class="fas fa-envelope mr-3"></i> mavericks12@gmail.com</p>
+              <p><i class="fas fa-phone mr-3"></i> +91 84959 39942</p>
+              <p><i class="fas fa-print mr-3"></i> +91 96958 85824</p>
+            </div>
+            <!-- Grid column -->
+          </div>
+          <!-- Grid row -->
+        </div>
+      </section>
+      <!-- Section: Links  -->
+  
+      <!-- Copyright -->
+      <div
+           class="text-center p-3"
+           style="background-color: rgba(0, 0, 0, 0.2)"
+           >
+        © 2024 Copyright:
+        <a class="text-white" href="https://mdbootstrap.com/"
+           >NutriNet.com</a
+          >
+      </div>
+      <!-- Copyright -->
+    </footer>
+
+    <script type="text/javascript">
+     document.addEventListener('DOMContentLoaded', function () {
+            var bg = document.getElementById("Introduction");
+            window.addEventListener('scroll', function () {
+                bg.style.opacity = 1 - window.pageYOffset / 550;
+                bg.style.top = window.pageYOffset + 'px';
+                bg.style.backgroundPositionY = -window.pageYOffset / 2 + 'px';
+            });
+        });
+</script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>AOS.init();</script>
+
+</body>
+</html>

@@ -52,4 +52,3 @@ git push -u origin main
  Congratulations, you just made a new Pull request!!! :fire:
 
 For doubts regarding pull requests ping your project coordinators.
-

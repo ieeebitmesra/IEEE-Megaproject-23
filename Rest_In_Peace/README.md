@@ -75,15 +75,14 @@ ClubConnect is a cutting-edge full-stack web development project designed to bri
 1. **Clone the Repository:**
 
    ```bash
-   git clone https://github.com/sumitt-kun/mega_project.git
+   git clone <url>
    ```
 
-   Replace `sumitt-kun` with your GitHub username.
 
 2. **Navigate to the Project Directory:**
 
    ```bash
-   cd mega_project
+   cd Rest_In_Peace
    ```
 
 3. **Install Dependencies:**

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="static/styles.css">
+    <title>Check Up</title>
+</head>
+<!-- For therapist -->
+<body>
+    <div class="box">
+        <div class="login">
+            <div class="login2">
+                <form action="/predict" method="POST">
+                    <h2>Check Up</h2>
+                    <input type="text" name="name" placeholder="Your Name">
+                    <input type="number" name="Age" placeholder="Your age">
+                    <select id="gender" name="sex">
+                        <option value="0">Female</option>
+                        <option value="1">Male</option>
+                      </select>
+                    <input type="number"  name="bp" placeholder="Blood Pressure">
+                    <input type="number" name="cholestrol" placeholder="Cholestrol Level">
+                    <select id="gender" name="sugar">
+                        <option value="0">Sugar(120 mg/dl or less)</option>
+                        <option value="1">Sugar(120 mg/dl or more)</option>
+                      </select>
+            
+                    <input type="number"name="heart" placeholder="Max-Heart Rate">
+                
+                    <button type="submit">Predict</button>
+                    </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
